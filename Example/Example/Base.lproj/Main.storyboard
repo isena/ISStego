@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="wX3-Ga-7Cx">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--ISStego - Example-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f46-uY-23e">
+                                <rect key="frame" x="122" y="188" width="356" height="224"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K0L-ew-Y7f">
+                                        <rect key="frame" x="26" y="161" width="304" height="49"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="Extract text from an image">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="1Xf-ys-Oce" kind="show" id="PDJ-Lh-A2a"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="What do you want?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h1i-gW-Qc6">
+                                        <rect key="frame" x="68" y="52" width="220" height="31"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yzr-w5-kYe">
+                                        <rect key="frame" x="20" y="104" width="316" height="42"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="Insert a text into an image">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="0FI-Aw-UUe" kind="show" id="s4e-5L-fT2"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="356" id="dUY-yn-6tV"/>
+                                    <constraint firstAttribute="height" constant="224" id="uAK-J9-Xo9"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="f46-uY-23e" secondAttribute="centerY" id="uiV-Xc-7z5"/>
+                            <constraint firstAttribute="centerX" secondItem="f46-uY-23e" secondAttribute="centerX" id="yvV-cm-h1B"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="ISStego - Example" id="Vvj-o1-omb">
+                        <barButtonItem key="backBarButtonItem" title=" " id="0dp-aG-Q7e"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="buttonExtract" destination="K0L-ew-Y7f" id="De1-by-Sfa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1137" y="362"/>
+        </scene>
+        <!--ISStego - Example-->
+        <scene sceneID="Ic1-Gz-BbB">
+            <objects>
+                <viewController storyboardIdentifier="InsertViewController" title="ISStego - Example" id="0FI-Aw-UUe" customClass="InsertViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Nmf-cu-CkY"/>
+                        <viewControllerLayoutGuide type="bottom" id="YLo-oe-CST"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2Od-7w-tOv">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1q4-Qy-6PP">
+                                <rect key="frame" x="10" y="164" width="580" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="We3-h9-GhZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Insert a text into below image">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="insert" destination="0FI-Aw-UUe" eventType="touchUpInside" id="HjP-GE-AjW"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UpF-ZM-lbT">
+                                <rect key="frame" x="0.0" y="224" width="600" height="376"/>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="type your text here..." textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tEp-in-VgN">
+                                <rect key="frame" x="30" y="94" width="540" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="knF-SO-Ojx"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="UpF-ZM-lbT" firstAttribute="leading" secondItem="2Od-7w-tOv" secondAttribute="leading" id="7HO-Mw-cTk"/>
+                            <constraint firstItem="1q4-Qy-6PP" firstAttribute="top" secondItem="tEp-in-VgN" secondAttribute="bottom" constant="30" id="9gR-Xs-GqI"/>
+                            <constraint firstItem="tEp-in-VgN" firstAttribute="top" secondItem="Nmf-cu-CkY" secondAttribute="bottom" constant="30" id="Bia-lk-gwF"/>
+                            <constraint firstAttribute="trailing" secondItem="1q4-Qy-6PP" secondAttribute="trailing" constant="10" id="Bky-w5-LNg"/>
+                            <constraint firstItem="UpF-ZM-lbT" firstAttribute="top" secondItem="1q4-Qy-6PP" secondAttribute="bottom" constant="20" id="EUw-XM-Ky4"/>
+                            <constraint firstAttribute="centerX" secondItem="1q4-Qy-6PP" secondAttribute="centerX" id="Kj8-nn-vZr"/>
+                            <constraint firstItem="1q4-Qy-6PP" firstAttribute="leading" secondItem="2Od-7w-tOv" secondAttribute="leading" constant="10" id="YXL-9W-pqi"/>
+                            <constraint firstItem="YLo-oe-CST" firstAttribute="top" secondItem="UpF-ZM-lbT" secondAttribute="bottom" id="dFq-i2-V3v"/>
+                            <constraint firstItem="tEp-in-VgN" firstAttribute="leading" secondItem="2Od-7w-tOv" secondAttribute="leading" constant="30" id="jqg-ED-LYU"/>
+                            <constraint firstAttribute="trailing" secondItem="UpF-ZM-lbT" secondAttribute="trailing" id="ljY-sQ-xpQ"/>
+                            <constraint firstAttribute="trailing" secondItem="tEp-in-VgN" secondAttribute="trailing" constant="30" id="nOW-pm-bhd"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="UpF-ZM-lbT" id="sIS-vB-rF7"/>
+                        <outlet property="textField" destination="tEp-in-VgN" id="cLG-nh-eyg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eZx-qZ-8le" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2098" y="-11"/>
+        </scene>
+        <!--ISStego - Example-->
+        <scene sceneID="bkM-DM-n6Y">
+            <objects>
+                <viewController storyboardIdentifier="ExtractViewController" title="ISStego - Example" id="1Xf-ys-Oce" customClass="ExtractViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Uxm-yP-NRA"/>
+                        <viewControllerLayoutGuide type="bottom" id="UML-5X-rjK"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="bla-p7-Sp8">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zGF-TT-FoR">
+                                <rect key="frame" x="0.0" y="64" width="600" height="386"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J9L-jU-FYS">
+                                <rect key="frame" x="10" y="470" width="580" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="tt3-nd-fr3"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Extract text from above image">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="extract" destination="1Xf-ys-Oce" eventType="touchUpInside" id="ywZ-01-EbZ"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="..." textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Huk-MT-6am">
+                                <rect key="frame" x="46" y="530" width="508" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Ced-Dg-ZbV"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="zGF-TT-FoR" firstAttribute="leading" secondItem="bla-p7-Sp8" secondAttribute="leading" id="5Un-Ro-NPb"/>
+                            <constraint firstItem="UML-5X-rjK" firstAttribute="top" secondItem="Huk-MT-6am" secondAttribute="bottom" constant="30" id="APz-6d-Qga"/>
+                            <constraint firstItem="Huk-MT-6am" firstAttribute="top" secondItem="J9L-jU-FYS" secondAttribute="bottom" constant="20" id="FJf-3N-A4E"/>
+                            <constraint firstItem="J9L-jU-FYS" firstAttribute="top" secondItem="zGF-TT-FoR" secondAttribute="bottom" constant="20" id="Gsp-Eh-JyO"/>
+                            <constraint firstAttribute="centerX" secondItem="J9L-jU-FYS" secondAttribute="centerX" id="TQl-sx-QwR"/>
+                            <constraint firstItem="J9L-jU-FYS" firstAttribute="leading" secondItem="bla-p7-Sp8" secondAttribute="leading" constant="10" id="eYG-vj-TOk"/>
+                            <constraint firstItem="zGF-TT-FoR" firstAttribute="top" secondItem="Uxm-yP-NRA" secondAttribute="bottom" id="mQQ-Lc-4jP"/>
+                            <constraint firstItem="Huk-MT-6am" firstAttribute="leading" secondItem="bla-p7-Sp8" secondAttribute="leadingMargin" constant="30" id="pUN-vw-Tpi"/>
+                            <constraint firstAttribute="trailing" secondItem="zGF-TT-FoR" secondAttribute="trailing" id="pdH-fI-91Y"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Huk-MT-6am" secondAttribute="trailing" constant="30" id="xeD-ZL-otk"/>
+                            <constraint firstAttribute="trailing" secondItem="J9L-jU-FYS" secondAttribute="trailing" constant="10" id="zfI-D8-zrU"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="zGF-TT-FoR" id="KfG-Gm-gvO"/>
+                        <outlet property="textField" destination="Huk-MT-6am" id="fVh-lf-26j"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="N79-Kt-sia" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2098" y="735"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="BlB-o7-hKF">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="wX3-Ga-7Cx" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Ovp-1X-f5a">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="TT0-tw-b5C"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YHU-oW-F15" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="244" y="362"/>
+        </scene>
+    </scenes>
+</document>
