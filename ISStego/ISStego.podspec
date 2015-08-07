@@ -92,7 +92,7 @@ Steganography comes from the Greek word and means "covered or protected". Basica
   #
 
   s.source_files  = "ISStego/**/*.{h,m}"
-  # s.exclude_files = "Classes/Exclude"
+  s.exclude_files = "ISStegoTests"
 
   # s.public_header_files = "Classes/**/*.h"
 
