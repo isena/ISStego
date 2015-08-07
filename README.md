@@ -77,4 +77,7 @@ UIImage *image  = [UIImage imageNamed:@"stegoImageName"];
 
 Isaac Stevao Sena, [@IsaacStevaoSena](https://twitter.com/isaacstevaosena)
 
+## License
 
+ISStego is released under the MIT license. See
+[LICENSE.md](https://github.com/isena/ISStego/blob/master/LICENSE.md).
