@@ -77,7 +77,7 @@
                                  }];
 }
 
-- (void)testDecodeError {
+- (void)testEncodeError {
     UIImage *image  = [ISTestUtilities imageNamed:ORIGINAL_IMAGE_NAME
                                            ofType:type()];
     
