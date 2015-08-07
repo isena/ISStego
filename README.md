@@ -37,20 +37,20 @@ Import the ISSteganographer
 ### Encode
 
 ```objective-c
-    NSString *encryptedPassword = @"47151d0e56f8dc";
-    
-    UIImage *image  = [UIImage imageNamed:@"imageName"];
-    
-    [ISSteganographer hideData:encryptedPassword
-                     withImage:image
-               completionBlock:^(UIImage *image, NSError *error) {
-                   if (error) {
-                       NSLog(@"error: %@", error);
-                   } else {
-                       [UIImagePNGRepresentation(image) writeToFile:@"PATH_OF_FILE"
-                                                         atomically:YES];
-                   }
-               }];
+NSString *encryptedPassword = @"47151d0e56f8dc";
+
+UIImage *image  = [UIImage imageNamed:@"imageName"];
+
+[ISSteganographer hideData:encryptedPassword
+                 withImage:image
+           completionBlock:^(UIImage *image, NSError *error) {
+               if (error) {
+                   NSLog(@"error: %@", error);
+               } else {
+                   [UIImagePNGRepresentation(image) writeToFile:@"PATH_OF_FILE"
+                                                     atomically:YES];
+               }
+           }];
 ```
 
 
@@ -58,18 +58,18 @@ Import the ISSteganographer
 
 
 ```objective-c
-    UIImage *image  = [UIImage imageNamed:@"stegoImageName"];
-    
-    [ISSteganographer dataFromImage:image
-                    completionBlock:^(NSData *data, NSError *error) {
-                        if (error) {
-                            NSLog(@"error: %@", error);
-                        } else {
-                            NSString *hiddenData = [[NSString alloc] initWithData:data
-                                                                         encoding:NSUTF8StringEncoding];
-                            NSLog(@"string: %@", hiddenData);
-                        }
-                    }];
+UIImage *image  = [UIImage imageNamed:@"stegoImageName"];
+
+[ISSteganographer dataFromImage:image
+                completionBlock:^(NSData *data, NSError *error) {
+                    if (error) {
+                        NSLog(@"error: %@", error);
+                    } else {
+                        NSString *hiddenData = [[NSString alloc] initWithData:data
+                                                                     encoding:NSUTF8StringEncoding];
+                        NSLog(@"string: %@", hiddenData);
+                    }
+                }];
 ```
 
 
