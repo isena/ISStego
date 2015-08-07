@@ -91,8 +91,8 @@ Steganography comes from the Greek word and means "covered or protected". Basica
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  = "ISStego/**/*.{h,m}"
-  s.exclude_files = "ISStegoTests"
+  s.source_files  = "ISStego/ISStego/**/*.{h,m}"
+  # s.exclude_files = "ISStegoTests"
 
   # s.public_header_files = "Classes/**/*.h"
 
