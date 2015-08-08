@@ -50,7 +50,11 @@
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString *filePath = [[paths objectAtIndex:0] stringByAppendingPathComponent:STEGO_IMAGE_NAME];
     if ([UIImagePNGRepresentation(image) writeToFile:filePath atomically:YES]) {
-        [ISUtils showMessage:@"Stego-object was created with success!"];
+        [ISUtils showMessage:@"your secret have been hidden with success!"];
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self.navigationController popToRootViewControllerAnimated:YES];
+        });
     } else {
         [ISUtils showMessage:@"Error on saving Stego-object"];
     }
