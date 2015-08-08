@@ -4,7 +4,7 @@ ISStego is an Objective-C wrapper that can be used to encode and decode secret d
 
 ## What is Steganography?
 
-Steganography comes from the Greek word and means *"covered or protected"*. Basically it is the practice of hiding important information within a unimportant object. For instance we can hide a message within another message, image, audio or video. 
+Steganography comes from the Greek words *steganos*, meaning **covered or protected**, and *graphein*, meaning **writing**. Basically it is the practice of hiding important information within a unimportant object. For instance we can hide a message within another message, image, audio or video. 
 
 ### [Steganography isEqualTo:Encryption]?
 
