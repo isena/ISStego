@@ -11,6 +11,8 @@
 #import "ISPixelUtilities.h"
 #import "ISStegoDefaults.h"
 
+#import <UIKit/UIKit.h>
+
 @interface ISStegoDecoder ()
 
 @property (nonatomic, assign) int currentShift;
