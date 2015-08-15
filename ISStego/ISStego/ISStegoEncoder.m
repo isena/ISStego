@@ -39,7 +39,7 @@
     
     UIImage *processedImage = nil;
     
-    if (size >= minPixels()) {
+    if (size >= MinPixels()) {
         CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();
         
         CGContextRef context = CGBitmapContextCreate(pixels,
@@ -67,7 +67,7 @@
         CGContextRelease(context);
     } else {
         if (error != NULL) {
-            *error = errorForDomainCode(ISStegoErrorDomainCodeImageTooSmall);
+            *error = ErrorForDomainCode(ISStegoErrorDomainCodeImageTooSmall);
         }
     }
     
@@ -89,7 +89,7 @@
     UInt32 dataLength = (UInt32)[messageToHide length];
     
     if (dataLength <= INT_MAX
-        && dataLength * BITS_PER_COMPONENT < size - sizeOfInfoLength()) {
+        && dataLength * BITS_PER_COMPONENT < size - SizeOfInfoLength()) {
         [self reset];
         
         NSData *data = [[NSData alloc] initWithBytes:&dataLength
@@ -102,7 +102,7 @@
         
         self.currentDataToHide = lengthDataInfo;
         
-        while (pixelPosition < sizeOfInfoLength()) {
+        while (pixelPosition < SizeOfInfoLength()) {
             pixels[pixelPosition] = [self newPixel:pixels[pixelPosition]];
             pixelPosition++;
         }
@@ -125,7 +125,7 @@
         success = YES;
     } else {
         if (error != NULL) {
-            *error = errorForDomainCode(ISStegoErrorDomainCodeDataTooBig);
+            *error = ErrorForDomainCode(ISStegoErrorDomainCodeDataTooBig);
         }
     }
     
@@ -153,7 +153,7 @@
             self.currentShift--;
         }
         
-        return newPixel(color, shiftedBits, colorToStep(self.step));
+        return NewPixel(color, shiftedBits, ColorToStep(self.step));
     }
     
     return color;

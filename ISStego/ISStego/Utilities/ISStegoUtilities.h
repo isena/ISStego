@@ -17,12 +17,8 @@ typedef NS_ENUM(NSInteger, ISStegoErrorDomainCode) {
 
 extern NSString *const ISStegoErrorDomain;
 
-@interface ISStegoUtilities : NSObject
+NSError *ErrorForDomainCode(ISStegoErrorDomainCode code);
 
-NSError *errorForDomainCode(ISStegoErrorDomainCode code);
+BOOL Contains(NSString *string, NSString *substring);
 
-BOOL contains(NSString *string, NSString *substring);
-
-NSString *substring(NSString *string, NSString *prefix, NSString *suffix);
-
-@end
+NSString *Substring(NSString *string, NSString *prefix, NSString *suffix);

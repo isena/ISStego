@@ -18,14 +18,14 @@ int const BYTES_OF_LENGTH = 4;
 NSString *const DATA_PREFIX = @"<m>";
 NSString *const DATA_SUFFIX = @"</m>";
 
-int sizeOfInfoLength() {
+int SizeOfInfoLength() {
     return BYTES_OF_LENGTH * BITS_PER_COMPONENT;
 }
 
-int minPixelsToMessage() {
+int MinPixelsToMessage() {
     return (int)([DATA_PREFIX length] + [DATA_SUFFIX length]) * BITS_PER_COMPONENT;
 }
 
-int minPixels() {
-    return sizeOfInfoLength() + minPixelsToMessage();
+int MinPixels() {
+    return SizeOfInfoLength() + MinPixelsToMessage();
 }

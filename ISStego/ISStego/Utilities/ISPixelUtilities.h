@@ -14,14 +14,10 @@ typedef NS_ENUM(NSInteger, ISPixelColor) {
     ISPixelColorBlue
 };
 
-@interface ISPixelUtilities : NSObject
+UInt32 Color(UInt32 x, int shift);
 
-UInt32 color(UInt32 x, int shift);
+UInt32 NewPixel(UInt32 pixel, UInt32 shiftedBits, int shift);
 
-UInt32 newPixel(UInt32 pixel, UInt32 shiftedBits, int shift);
+UInt32 AddBits(UInt32 number1, UInt32 number2, int shift);
 
-UInt32 addBits(UInt32 number1, UInt32 number2, int shift);
-
-ISPixelColor colorToStep(UInt32 pixel);
-
-@end
+ISPixelColor ColorToStep(UInt32 pixel);

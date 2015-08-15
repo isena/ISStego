@@ -31,14 +31,14 @@
     
     if ([self hasDataInImage:image
                        error:error]) {
-        NSString *base64 = substring(self.data, DATA_PREFIX, DATA_SUFFIX);
+        NSString *base64 = Substring(self.data, DATA_PREFIX, DATA_SUFFIX);
         
         data = [[NSData alloc] initWithBase64EncodedString:base64
                                                    options:0];
         
     } else {
         if (error != NULL) {
-            *error = errorForDomainCode(ISStegoErrorDomainCodeNoDataInImage);
+            *error = ErrorForDomainCode(ISStegoErrorDomainCodeNoDataInImage);
         }
     }
     
@@ -87,7 +87,7 @@
     
     UInt32 pixelPosition = 0;
 
-    while (pixelPosition < sizeOfInfoLength()) {
+    while (pixelPosition < SizeOfInfoLength()) {
         [self getDataWithPixel:pixels[pixelPosition]];
         pixelPosition++;
     }
@@ -104,7 +104,7 @@
         [self getDataWithPixel:pixels[pixelPosition]];
         pixelPosition += salt;
         
-        if (contains(self.data, DATA_SUFFIX)) {
+        if (Contains(self.data, DATA_SUFFIX)) {
             break;
         }
     }
@@ -116,7 +116,7 @@
 }
 
 - (void)getDataWithPixel:(UInt32)pixel {
-    [self getDataWithColor:color(pixel, colorToStep(self.step))];
+    [self getDataWithColor:Color(pixel, ColorToStep(self.step))];
 }
 
 - (void)getDataWithColor:(UInt32)color {
@@ -124,7 +124,7 @@
         UInt32 bit = color & 1;
         self.bitsCharacter = (bit << self.currentShift) | self.bitsCharacter;
         
-        if (self.step < sizeOfInfoLength()) {
+        if (self.step < SizeOfInfoLength()) {
             [self getLength];
         } else {
             [self getCharacter];
@@ -140,7 +140,7 @@
 }
 
 - (void)getLength {
-    self.length = addBits(self.length , self.bitsCharacter, self.step % (BITS_PER_COMPONENT - 1));
+    self.length = AddBits(self.length , self.bitsCharacter, self.step % (BITS_PER_COMPONENT - 1));
     
     self.bitsCharacter = 0;
 }
@@ -161,8 +161,8 @@
 
 - (BOOL)hasData {
     return ([self.data length] > 0
-            && contains(self.data, DATA_PREFIX)
-            && contains(self.data, DATA_SUFFIX))  ? YES : NO;
+            && Contains(self.data, DATA_PREFIX)
+            && Contains(self.data, DATA_SUFFIX))  ? YES : NO;
 }
 
 @end

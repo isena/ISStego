@@ -11,9 +11,7 @@
 
 NSString *const ISStegoErrorDomain = @"ISStegoErrorDomain";
 
-@implementation ISStegoUtilities
-
-BOOL contains(NSString *string, NSString *substring) {
+BOOL Contains(NSString *string, NSString *substring) {
     if(string
        && substring
        && !([string rangeOfString:substring
@@ -24,7 +22,7 @@ BOOL contains(NSString *string, NSString *substring) {
     return NO;
 }
 
-NSString *substring(NSString *string, NSString *prefix, NSString *suffix) {
+NSString *Substring(NSString *string, NSString *prefix, NSString *suffix) {
     NSString *substring = nil;
     
     if (string) {
@@ -45,7 +43,7 @@ NSString *substring(NSString *string, NSString *prefix, NSString *suffix) {
     return substring;
 }
 
-NSError *errorForDomainCode(ISStegoErrorDomainCode code) {
+NSError *ErrorForDomainCode(ISStegoErrorDomainCode code) {
     NSString *description = @"not defined";
     
     switch (code) {
@@ -54,7 +52,7 @@ NSError *errorForDomainCode(ISStegoErrorDomainCode code) {
             break;
             
         case ISStegoErrorDomainCodeImageTooSmall:
-            description = [NSString stringWithFormat:@"Image is too small: must have at least %d pixels", minPixels()];
+            description = [NSString stringWithFormat:@"Image is too small: must have at least %d pixels", MinPixels()];
             break;
             
         case ISStegoErrorDomainCodeNoDataInImage:
@@ -70,5 +68,3 @@ NSError *errorForDomainCode(ISStegoErrorDomainCode code) {
     
     return error;
 }
-
-@end

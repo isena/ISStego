@@ -18,6 +18,6 @@ extern int const BYTES_OF_LENGTH;
 extern NSString *const DATA_PREFIX;
 extern NSString *const DATA_SUFFIX;
 
-int sizeOfInfoLength();
+int SizeOfInfoLength();
 
-int minPixels();
+int MinPixels();
