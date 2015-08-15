@@ -11,15 +11,15 @@
 
 @interface ISSteganographer : NSObject
 
-typedef void(^ISStegoEncoderCompletionBlock)(UIImage *image, NSError *error);
+typedef void(^ISStegoEncoderCompletionBlock)(id image, NSError *error);
 
 typedef void(^ISStegoDecoderCompletionBlock)(NSData *data, NSError *error);
 
 + (void)hideData:(id)data
-       withImage:(UIImage *)image
+       withImage:(id)image
  completionBlock:(ISStegoEncoderCompletionBlock)completionBlock;
 
-+ (void)dataFromImage:(UIImage *)image
++ (void)dataFromImage:(id)image
       completionBlock:(ISStegoDecoderCompletionBlock)completionBlock;
 
 @end

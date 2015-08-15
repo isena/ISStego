@@ -11,7 +11,7 @@
 
 @interface ISStegoDecoder : NSObject
 
-- (NSData *)decodeStegoImage:(UIImage *)image
+- (NSData *)decodeStegoImage:(id)image
                        error:(NSError **)error;
 
 @end

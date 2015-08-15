@@ -13,7 +13,7 @@
 @implementation ISSteganographer
 
 + (void)hideData:(id)data
-       withImage:(UIImage *)image
+       withImage:(id)image
  completionBlock:(ISStegoEncoderCompletionBlock)completionBlock {
     dispatch_queue_t queue = dispatch_queue_create("steganography.encode.queue", DISPATCH_QUEUE_CONCURRENT);
     
@@ -23,9 +23,9 @@
             
             NSError *error = nil;
             
-            UIImage *stegoImage = [encoder stegoImageForImage:image
-                                                         data:data
-                                                        error:&error];
+            id stegoImage = [encoder stegoImageForImage:image
+                                                   data:data
+                                                  error:&error];
             
             completionBlock(stegoImage, error);
             
@@ -34,8 +34,8 @@
     });
 }
 
-+ (void)dataFromImage:(UIImage *)image
- completionBlock:(ISStegoDecoderCompletionBlock)completionBlock {
++ (void)dataFromImage:(id)image
+      completionBlock:(ISStegoDecoderCompletionBlock)completionBlock {
     dispatch_queue_t queue = dispatch_queue_create("steganography.decode.queue", DISPATCH_QUEUE_CONCURRENT);
     
     dispatch_async(queue, ^{

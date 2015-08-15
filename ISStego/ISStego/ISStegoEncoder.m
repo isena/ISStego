@@ -22,9 +22,9 @@
 
 @implementation ISStegoEncoder
 
-- (UIImage *)stegoImageForImage:(UIImage *)image
-                           data:(id)data
-                          error:(NSError **)error {
+- (id)stegoImageForImage:(id)image
+                    data:(id)data
+                   error:(NSError **)error {
     NSParameterAssert([data isKindOfClass:NSData.class] || [data isKindOfClass:NSString.class]);
     NSParameterAssert(image);
     
@@ -37,7 +37,7 @@
     UInt32 *pixels;
     pixels = (UInt32 *) calloc(size, sizeof(UInt32));
     
-    UIImage *processedImage = nil;
+    id processedImage = nil;
     
     if (size >= MinPixels()) {
         CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();

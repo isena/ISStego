@@ -11,8 +11,8 @@
 
 @interface ISStegoEncoder : NSObject
 
-- (UIImage *)stegoImageForImage:(UIImage *)image
-                           data:(id)data
-                          error:(NSError **)error;
+- (id)stegoImageForImage:(id)image
+                    data:(id)data
+                   error:(NSError **)error;
 
 @end

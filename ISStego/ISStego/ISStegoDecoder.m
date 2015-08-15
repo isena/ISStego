@@ -23,7 +23,7 @@
 
 @implementation ISStegoDecoder
 
-- (NSData *)decodeStegoImage:(UIImage *)image
+- (NSData *)decodeStegoImage:(id)image
                        error:(NSError **)error {
     NSParameterAssert(image);
     
@@ -45,7 +45,7 @@
     return data;
 }
 
-- (BOOL)hasDataInImage:(UIImage *)image
+- (BOOL)hasDataInImage:(id)image
                  error:(NSError **)error {
     CGImageRef inputCGImage = [image CGImage];
     NSUInteger width = CGImageGetWidth(inputCGImage);
@@ -86,7 +86,7 @@
     [self reset];
     
     UInt32 pixelPosition = 0;
-
+    
     while (pixelPosition < SizeOfInfoLength()) {
         [self getDataWithPixel:pixels[pixelPosition]];
         pixelPosition++;
