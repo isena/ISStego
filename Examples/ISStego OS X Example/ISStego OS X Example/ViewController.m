@@ -92,6 +92,7 @@
         if (result == NSFileHandlingPanelOKButton) {
             [self saveImage:image
                        file:panel.URL.path];
+            self.imageView.image = nil;
             self.buttonImage.transparent = NO;
             self.buttonEncode.enabled = NO;
             self.buttonDecode.enabled = NO;
