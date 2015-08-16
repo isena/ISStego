@@ -10,6 +10,7 @@
 #import "ISStegoUtilities.h"
 #import "ISPixelUtilities.h"
 #import "ISStegoDefaults.h"
+#import <CoreGraphics/CoreGraphics.h>
 
 @interface ISStegoDecoder ()
 

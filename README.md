@@ -2,7 +2,7 @@
 
 ISStego is an Objective-C library that can be used to encode and decode secret data with images using digital techniques of steganography, a form of security through obscurity.
 
-![example](Example/ISStegoExample.gif)
+![example](Examples/ISStego\ iOS\ Example/ISStegoExample.gif)
 
 ## What is Steganography?
 

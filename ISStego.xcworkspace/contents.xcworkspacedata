@@ -1,8 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Workspace
    version = "1.0">
+   <Group
+      location = "group:ISStego"
+      name = "ISStego">
+      <FileRef
+         location = "group:ISSteganographer.h">
+      </FileRef>
+      <FileRef
+         location = "group:ISSteganographer.m">
+      </FileRef>
+      <FileRef
+         location = "group:ISStegoDecoder.h">
+      </FileRef>
+      <FileRef
+         location = "group:ISStegoDecoder.m">
+      </FileRef>
+      <FileRef
+         location = "group:ISStegoEncoder.h">
+      </FileRef>
+      <FileRef
+         location = "group:ISStegoEncoder.m">
+      </FileRef>
+      <Group
+         location = "group:Utilities"
+         name = "Utilities">
+         <FileRef
+            location = "group:ISPixelUtilities.h">
+         </FileRef>
+         <FileRef
+            location = "group:ISPixelUtilities.m">
+         </FileRef>
+         <FileRef
+            location = "group:ISStegoDefaults.h">
+         </FileRef>
+         <FileRef
+            location = "group:ISStegoDefaults.m">
+         </FileRef>
+         <FileRef
+            location = "group:ISStegoUtilities.h">
+         </FileRef>
+         <FileRef
+            location = "group:ISStegoUtilities.m">
+         </FileRef>
+      </Group>
+   </Group>
    <FileRef
       location = "group:Tests/ISStego Tests.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Examples/ISStego iOS Example/ISStego iOS Example.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Tests/Pods/Pods.xcodeproj">

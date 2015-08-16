@@ -82,7 +82,7 @@ NSError *ErrorForDomainCode(ISStegoErrorDomainCode code) {
     CGImageRef imageRef = nil;
     
 #if TARGET_OS_IPHONE
-    imageRef = CFRetain([image CGImage]);
+    imageRef = (CGImageRef)CFRetain([image CGImage]);
 #else
     CGImageSourceRef source = CGImageSourceCreateWithData((CFDataRef)[image TIFFRepresentation], NULL);
     imageRef = CGImageSourceCreateImageAtIndex(source, 0, NULL);
