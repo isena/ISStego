@@ -20,8 +20,7 @@
 #pragma mark - Decode
 
 - (void)testDecodeImage {
-    UIImage *image  = [ISTestUtilities imageNamed:STEGO_IMAGE_NAME
-                                           ofType:type()];
+    id image  = [ISTestUtilities imageNamed:STEGO_IMAGE_NAME];
     
     XCTAssertNotNil(image);
     
@@ -52,8 +51,7 @@
 #pragma mark - Encode
 
 - (void)testEncode {
-    UIImage *image  = [ISTestUtilities imageNamed:ORIGINAL_IMAGE_NAME
-                                           ofType:type()];
+    id image  = [ISTestUtilities imageNamed:ORIGINAL_IMAGE_NAME];
     
     XCTAssertNotNil(image);
     
@@ -61,7 +59,7 @@
     
     [ISSteganographer hideData:TEXT_TO_HIDE
                      withImage:image
-               completionBlock:^(UIImage *image, NSError *error) {
+               completionBlock:^(id image, NSError *error) {
                    XCTAssertNil(error);
                    
                    XCTAssertNotNil(image);
@@ -78,8 +76,7 @@
 }
 
 - (void)testEncodeError {
-    UIImage *image  = [ISTestUtilities imageNamed:ORIGINAL_IMAGE_NAME
-                                           ofType:type()];
+    id image  = [ISTestUtilities imageNamed:ORIGINAL_IMAGE_NAME];
     
     XCTAssertNotNil(image);
     
@@ -87,7 +84,7 @@
     
     [ISSteganographer hideData:BIG_TEXT_TO_HIDE
                      withImage:image
-               completionBlock:^(UIImage *image, NSError *error) {
+               completionBlock:^(id image, NSError *error) {
                    XCTAssertNotNil(error);
                    
                    XCTAssertNil(image);
@@ -106,8 +103,7 @@
 #pragma mark - Encode/Decode
 
 - (void)testEncodeDecode {
-    UIImage *originalImage  = [ISTestUtilities imageNamed:ORIGINAL_IMAGE_NAME
-                                                   ofType:type()];
+    id originalImage  = [ISTestUtilities imageNamed:ORIGINAL_IMAGE_NAME];
     
     XCTAssertNotNil(originalImage);
     
@@ -115,7 +111,7 @@
     
     [ISSteganographer hideData:TEXT_TO_HIDE
                      withImage:originalImage
-               completionBlock:^(UIImage *image, NSError *error) {
+               completionBlock:^(id image, NSError *error) {
                    XCTAssertNil(error);
                    
                    XCTAssertNotNil(image);
@@ -144,8 +140,7 @@
 }
 
 - (void)testAEncodeSaveDecode {
-    UIImage *originalImage  = [ISTestUtilities imageNamed:ORIGINAL_IMAGE_NAME
-                                                   ofType:type()];
+    id originalImage  = [ISTestUtilities imageNamed:ORIGINAL_IMAGE_NAME];
     
     XCTAssertNotNil(originalImage);
     
@@ -153,7 +148,7 @@
     
     [ISSteganographer hideData:TEXT_TO_HIDE
                      withImage:originalImage
-               completionBlock:^(UIImage *image, NSError *error) {
+               completionBlock:^(id image, NSError *error) {
                    XCTAssertNil(error);
                    
                    XCTAssertNotNil(image);
@@ -162,11 +157,11 @@
                    NSString *filePath = [ISTestUtilities filePathToFilename:STEGO_IMAGE_TO_SAVE_NAME
                                                                        type:type()];
                    
-                   XCTAssertTrue([UIImagePNGRepresentation(image) writeToFile:filePath
-                                                                   atomically:YES]);
+                   XCTAssertTrue([ISTestUtilities saveImage:image
+                                                       file:filePath]);
                    
                    // getting same image from disk
-                   UIImage *stegoImage = [UIImage imageWithContentsOfFile:filePath];
+                   id stegoImage = [ISTestUtilities imageToFilepath:filePath];
                    
                    XCTAssertNotNil(stegoImage);
                    

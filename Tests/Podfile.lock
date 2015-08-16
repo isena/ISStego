@@ -1,0 +1,14 @@
+PODS:
+  - ISStego (0.0.1)
+
+DEPENDENCIES:
+  - ISStego (from `../`)
+
+EXTERNAL SOURCES:
+  ISStego:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  ISStego: dcd1129b553e430547d91b4bafa94770f65dc9a9
+
+COCOAPODS: 0.38.2

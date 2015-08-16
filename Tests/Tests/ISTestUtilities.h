@@ -7,7 +7,6 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <UIKit/UIKit.h>
 
 extern double const TIME_EXPECTATION;
 extern NSString *const ORIGINAL_IMAGE_NAME;
@@ -24,12 +23,14 @@ NSString *type();
 
 @interface ISTestUtilities : NSObject
 
-+ (UIImage *)imageNamed:(NSString *)name;
++ (id)imageNamed:(NSString *)name;
 
-+ (UIImage *)imageNamed:(NSString *)name
-                 ofType:(NSString *)type;
++ (id)imageToFilepath:(NSString *)filepath;
 
 + (NSString *)filePathToFilename:(NSString *)filename
                             type:(NSString *)type;
+
++ (BOOL)saveImage:(id)image
+             file:(NSString *)path;
 
 @end

@@ -17,8 +17,7 @@
 @implementation ISStegoDecoderTest
 
 - (void)testDecodeStegoImage {
-    UIImage *image  = [ISTestUtilities imageNamed:STEGO_IMAGE_NAME
-                                           ofType:type()];
+    id image  = [ISTestUtilities imageNamed:STEGO_IMAGE_NAME];
     
     XCTAssertNotNil(image, @"image is nil");
     
@@ -33,6 +32,8 @@
                                              encoding:NSUTF8StringEncoding];
     
     XCTAssertTrue([string isEqual:TEXT_TO_HIDE], @"%@ is not equal to %@", string, TEXT_TO_HIDE);
+    
+    decoder = nil;
 }
 
 #pragma mark - Exception
