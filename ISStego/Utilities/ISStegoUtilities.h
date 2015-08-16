@@ -22,3 +22,11 @@ NSError *ErrorForDomainCode(ISStegoErrorDomainCode code);
 BOOL Contains(NSString *string, NSString *substring);
 
 NSString *Substring(NSString *string, NSString *prefix, NSString *suffix);
+
+@interface ISStegoUtilities : NSObject
+
++ (CGImageRef)imageRefForImage:(id)image;
+
++ (id)imageForCGImage:(CGImageRef)imageRef;
+
+@end

@@ -11,8 +11,6 @@
 #import "ISPixelUtilities.h"
 #import "ISStegoDefaults.h"
 
-#import <UIKit/UIKit.h>
-
 @interface ISStegoDecoder ()
 
 @property (nonatomic, assign) int currentShift;
@@ -49,7 +47,7 @@
 
 - (BOOL)hasDataInImage:(id)image
                  error:(NSError **)error {
-    CGImageRef inputCGImage = [image CGImage];
+    CGImageRef inputCGImage = [ISStegoUtilities imageRefForImage:image];
     NSUInteger width = CGImageGetWidth(inputCGImage);
     NSUInteger height = CGImageGetHeight(inputCGImage);
     

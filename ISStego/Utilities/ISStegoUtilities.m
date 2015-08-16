@@ -8,6 +8,13 @@
 
 #import "ISStegoUtilities.h"
 #import "ISStegoDefaults.h"
+#import <TargetConditionals.h>
+
+#if TARGET_OS_IPHONE
+    #import <UIKit/UIKit.h>
+#else
+    #import <AppKit/AppKit.h>
+#endif
 
 NSString *const ISStegoErrorDomain = @"ISStegoErrorDomain";
 
@@ -68,3 +75,33 @@ NSError *ErrorForDomainCode(ISStegoErrorDomainCode code) {
     
     return error;
 }
+
+@implementation ISStegoUtilities
+
++ (CGImageRef)imageRefForImage:(id)image {
+    CGImageRef imageRef = nil;
+    
+#if TARGET_OS_IPHONE
+    imageRef = CFRetain([image CGImage]);
+#else
+    CGImageSourceRef source = CGImageSourceCreateWithData((CFDataRef)[image TIFFRepresentation], NULL);
+    imageRef = CGImageSourceCreateImageAtIndex(source, 0, NULL);
+    free(source);
+#endif
+    
+    return imageRef;
+}
+
++ (id)imageForCGImage:(CGImageRef)imageRef {
+    id image = nil;
+#if TARGET_OS_IPHONE
+    image = [UIImage imageWithCGImage:imageRef];
+#else
+    image = [[NSImage alloc] initWithCGImage:imageRef
+                                        size:NSZeroSize];
+#endif
+    return image;
+}
+
+@end
+

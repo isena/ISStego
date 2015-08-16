@@ -11,8 +11,6 @@
 #import "ISPixelUtilities.h"
 #import "ISStegoDefaults.h"
 
-#import <UIKit/UIKit.h>
-
 @interface ISStegoEncoder ()
 
 @property (nonatomic, assign) int currentShift;
@@ -30,7 +28,7 @@
     NSParameterAssert([data isKindOfClass:NSData.class] || [data isKindOfClass:NSString.class]);
     NSParameterAssert(image);
     
-    CGImageRef inputCGImage = [image CGImage];
+    CGImageRef inputCGImage = [ISStegoUtilities imageRefForImage:image];
     NSUInteger width = CGImageGetWidth(inputCGImage);
     NSUInteger height = CGImageGetHeight(inputCGImage);
     
@@ -61,7 +59,7 @@
         
         if (success) {
             CGImageRef newCGImage = CGBitmapContextCreateImage(context);
-            processedImage = [UIImage imageWithCGImage:newCGImage];
+            processedImage = [ISStegoUtilities imageForCGImage:newCGImage];
             CGImageRelease(newCGImage);
         }
         
@@ -73,6 +71,7 @@
         }
     }
     
+    CGImageRelease(inputCGImage);
     free(pixels);
     
     return processedImage;
