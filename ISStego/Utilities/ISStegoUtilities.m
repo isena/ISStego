@@ -80,11 +80,16 @@ CGImageRef CGImageCreateWithImage(id image) {
     CGImageRef imageRef = nil;
     
 #if TARGET_OS_IPHONE
+    NSCAssert([image isKindOfClass:UIImage.class], @"image must be kind of UIImage");
     imageRef = (CGImageRef)CFRetain([image CGImage]);
 #else
-    CGImageSourceRef source = CGImageSourceCreateWithData((CFDataRef)[image TIFFRepresentation], NULL);
+    NSCAssert([image isKindOfClass:NSImage.class], @"image must be kind of NSImage");
+    NSData *data = [image TIFFRepresentation];
+    CFDataRef dataRef = (CFDataRef)CFBridgingRetain(data);
+    CGImageSourceRef source = CGImageSourceCreateWithData(dataRef, NULL);
     imageRef = CGImageSourceCreateImageAtIndex(source, 0, NULL);
-    free(source);
+    CFRelease(dataRef);
+    CFRelease(source);
 #endif
     
     return imageRef;
