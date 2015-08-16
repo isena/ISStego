@@ -13,7 +13,6 @@
 		DC11C2541B80000400851280 /* image_8x8.png in Resources */ = {isa = PBXBuildFile; fileRef = DC11C24A1B80000400851280 /* image_8x8.png */; };
 		DC11C2551B80000400851280 /* stegoImage.png in Resources */ = {isa = PBXBuildFile; fileRef = DC11C24B1B80000400851280 /* stegoImage.png */; };
 		DC11C25A1B80000400851280 /* ISTestUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = DC11C2511B80000400851280 /* ISTestUtilities.m */; };
-		DC11C26A1B80030100851280 /* OS_X_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = DC11C2691B80030100851280 /* OS_X_Tests.m */; };
 		DC11C26F1B80081E00851280 /* ISTestUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = DC11C2511B80000400851280 /* ISTestUtilities.m */; };
 		DC11C2701B800A9C00851280 /* image.png in Resources */ = {isa = PBXBuildFile; fileRef = DC11C2481B80000400851280 /* image.png */; };
 		DC11C2711B800A9C00851280 /* image_100x100.png in Resources */ = {isa = PBXBuildFile; fileRef = DC11C2491B80000400851280 /* image_100x100.png */; };
@@ -45,7 +44,6 @@
 		DC11C2511B80000400851280 /* ISTestUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ISTestUtilities.m; sourceTree = "<group>"; };
 		DC11C2651B80030100851280 /* OS X Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "OS X Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC11C2681B80030100851280 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DC11C2691B80030100851280 /* OS_X_Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OS_X_Tests.m; sourceTree = "<group>"; };
 		DC11C2741B800AB700851280 /* libPods-ios.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-ios.a"; path = "Pods/../build/Debug-iphoneos/libPods-ios.a"; sourceTree = "<group>"; };
 		DC11C2781B80197300851280 /* ISSteganographerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ISSteganographerTest.m; sourceTree = "<group>"; };
 		DC11C2791B80197300851280 /* ISStegoDecoderTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ISStegoDecoderTest.m; sourceTree = "<group>"; };
@@ -136,7 +134,6 @@
 		DC11C2661B80030100851280 /* OS X Tests */ = {
 			isa = PBXGroup;
 			children = (
-				DC11C2691B80030100851280 /* OS_X_Tests.m */,
 				DC11C2671B80030100851280 /* Supporting Files */,
 			);
 			path = "OS X Tests";
@@ -353,7 +350,6 @@
 				DC11C2801B80197300851280 /* ISStegoEncoderTest.m in Sources */,
 				DC11C27C1B80197300851280 /* ISSteganographerTest.m in Sources */,
 				DC11C26F1B80081E00851280 /* ISTestUtilities.m in Sources */,
-				DC11C26A1B80030100851280 /* OS_X_Tests.m in Sources */,
 				DC11C27E1B80197300851280 /* ISStegoDecoderTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
