@@ -30,8 +30,7 @@
     
     NSData *data = nil;
     
-    if ([self hasDataInImage:image
-                       error:error]) {
+    if ([self hasDataInImage:image]) {
         NSString *base64 = Substring(self.data, DATA_PREFIX, DATA_SUFFIX);
         
         data = [[NSData alloc] initWithBase64EncodedString:base64
@@ -46,9 +45,8 @@
     return data;
 }
 
-- (BOOL)hasDataInImage:(id)image
-                 error:(NSError **)error {
-    CGImageRef inputCGImage = [ISStegoUtilities imageRefForImage:image];
+- (BOOL)hasDataInImage:(id)image {
+    CGImageRef inputCGImage = CGImageCreateWithImage(image);
     NSUInteger width = CGImageGetWidth(inputCGImage);
     NSUInteger height = CGImageGetHeight(inputCGImage);
     
@@ -69,12 +67,12 @@
     CGContextDrawImage(context, CGRectMake(0, 0, width, height), inputCGImage);
     
     [self searchDatainPixels:pixels
-                    withSize:size
-                       error:error];
+                    withSize:size];
     
     free(pixels);
     CGColorSpaceRelease(colorSpace);
     CGContextRelease(context);
+    CGImageRelease(inputCGImage);
     
     return [self hasData];
 }
@@ -82,8 +80,7 @@
 #pragma mark - Pixel operations
 
 - (void)searchDatainPixels:(UInt32 *)pixels
-                  withSize:(NSUInteger)size
-                     error:(NSError **)error {
+                  withSize:(NSUInteger)size {
     [self reset];
     
     UInt32 pixelPosition = 0;

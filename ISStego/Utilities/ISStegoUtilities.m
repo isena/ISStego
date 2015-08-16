@@ -76,9 +76,7 @@ NSError *ErrorForDomainCode(ISStegoErrorDomainCode code) {
     return error;
 }
 
-@implementation ISStegoUtilities
-
-+ (CGImageRef)imageRefForImage:(id)image {
+CGImageRef CGImageCreateWithImage(id image) {
     CGImageRef imageRef = nil;
     
 #if TARGET_OS_IPHONE
@@ -92,7 +90,7 @@ NSError *ErrorForDomainCode(ISStegoErrorDomainCode code) {
     return imageRef;
 }
 
-+ (id)imageForCGImage:(CGImageRef)imageRef {
+id Image(CGImageRef imageRef) {
     id image = nil;
 #if TARGET_OS_IPHONE
     image = [UIImage imageWithCGImage:imageRef];
@@ -102,6 +100,4 @@ NSError *ErrorForDomainCode(ISStegoErrorDomainCode code) {
 #endif
     return image;
 }
-
-@end
 

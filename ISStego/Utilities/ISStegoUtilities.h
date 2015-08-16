@@ -24,10 +24,6 @@ BOOL Contains(NSString *string, NSString *substring);
 
 NSString *Substring(NSString *string, NSString *prefix, NSString *suffix);
 
-@interface ISStegoUtilities : NSObject
+CGImageRef CGImageCreateWithImage(id image);
 
-+ (CGImageRef)imageRefForImage:(id)image;
-
-+ (id)imageForCGImage:(CGImageRef)imageRef;
-
-@end
+id Image(CGImageRef imageRef);

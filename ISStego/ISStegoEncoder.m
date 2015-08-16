@@ -29,7 +29,7 @@
     NSParameterAssert([data isKindOfClass:NSData.class] || [data isKindOfClass:NSString.class]);
     NSParameterAssert(image);
     
-    CGImageRef inputCGImage = [ISStegoUtilities imageRefForImage:image];
+    CGImageRef inputCGImage = CGImageCreateWithImage(image);
     NSUInteger width = CGImageGetWidth(inputCGImage);
     NSUInteger height = CGImageGetHeight(inputCGImage);
     
@@ -60,7 +60,7 @@
         
         if (success) {
             CGImageRef newCGImage = CGBitmapContextCreateImage(context);
-            processedImage = [ISStegoUtilities imageForCGImage:newCGImage];
+            processedImage = Image(newCGImage);
             CGImageRelease(newCGImage);
         }
         
@@ -73,6 +73,7 @@
     }
     
     CGImageRelease(inputCGImage);
+    
     free(pixels);
     
     return processedImage;

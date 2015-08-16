@@ -1,0 +1,475 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DC6669221B80E3F400EFFB43 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DC6669211B80E3F400EFFB43 /* AppDelegate.m */; };
+		DC6669241B80E3F400EFFB43 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DC6669231B80E3F400EFFB43 /* main.m */; };
+		DC6669271B80E3F400EFFB43 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC6669261B80E3F400EFFB43 /* ViewController.m */; };
+		DC6669291B80E3F400EFFB43 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC6669281B80E3F400EFFB43 /* Images.xcassets */; };
+		DC66692C1B80E3F400EFFB43 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC66692A1B80E3F400EFFB43 /* Main.storyboard */; };
+		DC6669381B80E3F400EFFB43 /* ISStego_OS_X_ExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DC6669371B80E3F400EFFB43 /* ISStego_OS_X_ExampleTests.m */; };
+		DC66694F1B80E43A00EFFB43 /* ISSteganographer.m in Sources */ = {isa = PBXBuildFile; fileRef = DC6669431B80E43A00EFFB43 /* ISSteganographer.m */; };
+		DC6669501B80E43A00EFFB43 /* ISStegoDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = DC6669451B80E43A00EFFB43 /* ISStegoDecoder.m */; };
+		DC6669511B80E43A00EFFB43 /* ISStegoEncoder.m in Sources */ = {isa = PBXBuildFile; fileRef = DC6669471B80E43A00EFFB43 /* ISStegoEncoder.m */; };
+		DC6669521B80E43A00EFFB43 /* ISPixelUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = DC66694A1B80E43A00EFFB43 /* ISPixelUtilities.m */; };
+		DC6669531B80E43A00EFFB43 /* ISStegoDefaults.m in Sources */ = {isa = PBXBuildFile; fileRef = DC66694C1B80E43A00EFFB43 /* ISStegoDefaults.m */; };
+		DC6669541B80E43A00EFFB43 /* ISStegoUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = DC66694E1B80E43A00EFFB43 /* ISStegoUtilities.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DC6669321B80E3F400EFFB43 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DC6669131B80E3F400EFFB43 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DC66691A1B80E3F400EFFB43;
+			remoteInfo = "ISStego OS X Example";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		DC66691B1B80E3F400EFFB43 /* ISStego OS X Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ISStego OS X Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC66691F1B80E3F400EFFB43 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DC6669201B80E3F400EFFB43 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		DC6669211B80E3F400EFFB43 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		DC6669231B80E3F400EFFB43 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		DC6669251B80E3F400EFFB43 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		DC6669261B80E3F400EFFB43 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		DC6669281B80E3F400EFFB43 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		DC66692B1B80E3F400EFFB43 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DC6669311B80E3F400EFFB43 /* ISStego OS X ExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ISStego OS X ExampleTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC6669361B80E3F400EFFB43 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DC6669371B80E3F400EFFB43 /* ISStego_OS_X_ExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ISStego_OS_X_ExampleTests.m; sourceTree = "<group>"; };
+		DC6669421B80E43A00EFFB43 /* ISSteganographer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ISSteganographer.h; sourceTree = "<group>"; };
+		DC6669431B80E43A00EFFB43 /* ISSteganographer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ISSteganographer.m; sourceTree = "<group>"; };
+		DC6669441B80E43A00EFFB43 /* ISStegoDecoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ISStegoDecoder.h; sourceTree = "<group>"; };
+		DC6669451B80E43A00EFFB43 /* ISStegoDecoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ISStegoDecoder.m; sourceTree = "<group>"; };
+		DC6669461B80E43A00EFFB43 /* ISStegoEncoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ISStegoEncoder.h; sourceTree = "<group>"; };
+		DC6669471B80E43A00EFFB43 /* ISStegoEncoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ISStegoEncoder.m; sourceTree = "<group>"; };
+		DC6669491B80E43A00EFFB43 /* ISPixelUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ISPixelUtilities.h; sourceTree = "<group>"; };
+		DC66694A1B80E43A00EFFB43 /* ISPixelUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ISPixelUtilities.m; sourceTree = "<group>"; };
+		DC66694B1B80E43A00EFFB43 /* ISStegoDefaults.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ISStegoDefaults.h; sourceTree = "<group>"; };
+		DC66694C1B80E43A00EFFB43 /* ISStegoDefaults.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ISStegoDefaults.m; sourceTree = "<group>"; };
+		DC66694D1B80E43A00EFFB43 /* ISStegoUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ISStegoUtilities.h; sourceTree = "<group>"; };
+		DC66694E1B80E43A00EFFB43 /* ISStegoUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ISStegoUtilities.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DC6669181B80E3F400EFFB43 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DC66692E1B80E3F400EFFB43 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DC6669121B80E3F400EFFB43 = {
+			isa = PBXGroup;
+			children = (
+				DC66691D1B80E3F400EFFB43 /* ISStego OS X Example */,
+				DC6669341B80E3F400EFFB43 /* ISStego OS X ExampleTests */,
+				DC66691C1B80E3F400EFFB43 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DC66691C1B80E3F400EFFB43 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DC66691B1B80E3F400EFFB43 /* ISStego OS X Example.app */,
+				DC6669311B80E3F400EFFB43 /* ISStego OS X ExampleTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DC66691D1B80E3F400EFFB43 /* ISStego OS X Example */ = {
+			isa = PBXGroup;
+			children = (
+				DC6669201B80E3F400EFFB43 /* AppDelegate.h */,
+				DC6669211B80E3F400EFFB43 /* AppDelegate.m */,
+				DC6669251B80E3F400EFFB43 /* ViewController.h */,
+				DC6669261B80E3F400EFFB43 /* ViewController.m */,
+				DC6669281B80E3F400EFFB43 /* Images.xcassets */,
+				DC66692A1B80E3F400EFFB43 /* Main.storyboard */,
+				DC6669411B80E43A00EFFB43 /* ISStego */,
+				DC66691E1B80E3F400EFFB43 /* Supporting Files */,
+			);
+			path = "ISStego OS X Example";
+			sourceTree = "<group>";
+		};
+		DC66691E1B80E3F400EFFB43 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DC66691F1B80E3F400EFFB43 /* Info.plist */,
+				DC6669231B80E3F400EFFB43 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DC6669341B80E3F400EFFB43 /* ISStego OS X ExampleTests */ = {
+			isa = PBXGroup;
+			children = (
+				DC6669371B80E3F400EFFB43 /* ISStego_OS_X_ExampleTests.m */,
+				DC6669351B80E3F400EFFB43 /* Supporting Files */,
+			);
+			path = "ISStego OS X ExampleTests";
+			sourceTree = "<group>";
+		};
+		DC6669351B80E3F400EFFB43 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DC6669361B80E3F400EFFB43 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DC6669411B80E43A00EFFB43 /* ISStego */ = {
+			isa = PBXGroup;
+			children = (
+				DC6669421B80E43A00EFFB43 /* ISSteganographer.h */,
+				DC6669431B80E43A00EFFB43 /* ISSteganographer.m */,
+				DC6669441B80E43A00EFFB43 /* ISStegoDecoder.h */,
+				DC6669451B80E43A00EFFB43 /* ISStegoDecoder.m */,
+				DC6669461B80E43A00EFFB43 /* ISStegoEncoder.h */,
+				DC6669471B80E43A00EFFB43 /* ISStegoEncoder.m */,
+				DC6669481B80E43A00EFFB43 /* Utilities */,
+			);
+			name = ISStego;
+			path = ../../../ISStego;
+			sourceTree = "<group>";
+		};
+		DC6669481B80E43A00EFFB43 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				DC6669491B80E43A00EFFB43 /* ISPixelUtilities.h */,
+				DC66694A1B80E43A00EFFB43 /* ISPixelUtilities.m */,
+				DC66694B1B80E43A00EFFB43 /* ISStegoDefaults.h */,
+				DC66694C1B80E43A00EFFB43 /* ISStegoDefaults.m */,
+				DC66694D1B80E43A00EFFB43 /* ISStegoUtilities.h */,
+				DC66694E1B80E43A00EFFB43 /* ISStegoUtilities.m */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DC66691A1B80E3F400EFFB43 /* ISStego OS X Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DC66693B1B80E3F400EFFB43 /* Build configuration list for PBXNativeTarget "ISStego OS X Example" */;
+			buildPhases = (
+				DC6669171B80E3F400EFFB43 /* Sources */,
+				DC6669181B80E3F400EFFB43 /* Frameworks */,
+				DC6669191B80E3F400EFFB43 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "ISStego OS X Example";
+			productName = "ISStego OS X Example";
+			productReference = DC66691B1B80E3F400EFFB43 /* ISStego OS X Example.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DC6669301B80E3F400EFFB43 /* ISStego OS X ExampleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DC66693E1B80E3F400EFFB43 /* Build configuration list for PBXNativeTarget "ISStego OS X ExampleTests" */;
+			buildPhases = (
+				DC66692D1B80E3F400EFFB43 /* Sources */,
+				DC66692E1B80E3F400EFFB43 /* Frameworks */,
+				DC66692F1B80E3F400EFFB43 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DC6669331B80E3F400EFFB43 /* PBXTargetDependency */,
+			);
+			name = "ISStego OS X ExampleTests";
+			productName = "ISStego OS X ExampleTests";
+			productReference = DC6669311B80E3F400EFFB43 /* ISStego OS X ExampleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DC6669131B80E3F400EFFB43 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0640;
+				ORGANIZATIONNAME = iSena;
+				TargetAttributes = {
+					DC66691A1B80E3F400EFFB43 = {
+						CreatedOnToolsVersion = 6.4;
+					};
+					DC6669301B80E3F400EFFB43 = {
+						CreatedOnToolsVersion = 6.4;
+						TestTargetID = DC66691A1B80E3F400EFFB43;
+					};
+				};
+			};
+			buildConfigurationList = DC6669161B80E3F400EFFB43 /* Build configuration list for PBXProject "ISStego OS X Example" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DC6669121B80E3F400EFFB43;
+			productRefGroup = DC66691C1B80E3F400EFFB43 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DC66691A1B80E3F400EFFB43 /* ISStego OS X Example */,
+				DC6669301B80E3F400EFFB43 /* ISStego OS X ExampleTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DC6669191B80E3F400EFFB43 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC6669291B80E3F400EFFB43 /* Images.xcassets in Resources */,
+				DC66692C1B80E3F400EFFB43 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DC66692F1B80E3F400EFFB43 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DC6669171B80E3F400EFFB43 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC6669271B80E3F400EFFB43 /* ViewController.m in Sources */,
+				DC6669521B80E43A00EFFB43 /* ISPixelUtilities.m in Sources */,
+				DC6669531B80E43A00EFFB43 /* ISStegoDefaults.m in Sources */,
+				DC6669511B80E43A00EFFB43 /* ISStegoEncoder.m in Sources */,
+				DC6669501B80E43A00EFFB43 /* ISStegoDecoder.m in Sources */,
+				DC6669241B80E3F400EFFB43 /* main.m in Sources */,
+				DC6669541B80E43A00EFFB43 /* ISStegoUtilities.m in Sources */,
+				DC6669221B80E3F400EFFB43 /* AppDelegate.m in Sources */,
+				DC66694F1B80E43A00EFFB43 /* ISSteganographer.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DC66692D1B80E3F400EFFB43 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC6669381B80E3F400EFFB43 /* ISStego_OS_X_ExampleTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DC6669331B80E3F400EFFB43 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DC66691A1B80E3F400EFFB43 /* ISStego OS X Example */;
+			targetProxy = DC6669321B80E3F400EFFB43 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		DC66692A1B80E3F400EFFB43 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DC66692B1B80E3F400EFFB43 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DC6669391B80E3F400EFFB43 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		DC66693A1B80E3F400EFFB43 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		DC66693C1B80E3F400EFFB43 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "ISStego OS X Example/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		DC66693D1B80E3F400EFFB43 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "ISStego OS X Example/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		DC66693F1B80E3F400EFFB43 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "ISStego OS X ExampleTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ISStego OS X Example.app/Contents/MacOS/ISStego OS X Example";
+			};
+			name = Debug;
+		};
+		DC6669401B80E3F400EFFB43 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "ISStego OS X ExampleTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ISStego OS X Example.app/Contents/MacOS/ISStego OS X Example";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DC6669161B80E3F400EFFB43 /* Build configuration list for PBXProject "ISStego OS X Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DC6669391B80E3F400EFFB43 /* Debug */,
+				DC66693A1B80E3F400EFFB43 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DC66693B1B80E3F400EFFB43 /* Build configuration list for PBXNativeTarget "ISStego OS X Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DC66693C1B80E3F400EFFB43 /* Debug */,
+				DC66693D1B80E3F400EFFB43 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		DC66693E1B80E3F400EFFB43 /* Build configuration list for PBXNativeTarget "ISStego OS X ExampleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DC66693F1B80E3F400EFFB43 /* Debug */,
+				DC6669401B80E3F400EFFB43 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DC6669131B80E3F400EFFB43 /* Project object */;
+}
