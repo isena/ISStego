@@ -8,16 +8,36 @@
 
 #import <Foundation/Foundation.h>
 
+/** Objective-C library for Steganography
+ *
+ */
 @interface ISSteganographer : NSObject
 
 typedef void(^ISStegoEncoderCompletionBlock)(id image, NSError *error);
 
 typedef void(^ISStegoDecoderCompletionBlock)(NSData *data, NSError *error);
 
+/**
+ Encode data into an image.
+ 
+ @param data The data to be encoded/hidden.
+ @param image The image used to hide the data.
+ @param completionBlock A block object to be executed when operation finishes. This block has no return value and takes two arguments: 
+ If successful, It will return an stego-object (an image with the hidden data) and the NSError object returned will be nil.
+ If failed, NSError will be populated with the error that caused the encode to fail.
+ */
 + (void)hideData:(id)data
        withImage:(id)image
  completionBlock:(ISStegoEncoderCompletionBlock)completionBlock;
 
+/**
+ Decode data from an image.
+ 
+ @param image The image with the data encoded.
+ @param completionBlock A block object to be executed when operation finishes. This block has no return value and takes two arguments:
+ If successful, It will return the hidden data and the NSError object returned will be nil.
+ If failed, NSError will be populated with the error that caused the decode to fail.
+ */
 + (void)dataFromImage:(id)image
       completionBlock:(ISStegoDecoderCompletionBlock)completionBlock;
 
