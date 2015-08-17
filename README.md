@@ -2,8 +2,6 @@
 
 ISStego is an Objective-C library that can be used to encode and decode secret data with images using digital techniques of steganography, a form of security through obscurity.
 
-![example](Examples/ISStego\ iOS\ Example/ISStegoExample.gif)
-
 ## What is Steganography?
 
 Steganography comes from the Greek words *steganos*, meaning **covered or protected**, and *graphein*, meaning **writing**. Basically it is the practice of hiding important information within a unimportant object. For instance we can hide a message within another message, image, audio or video. 
@@ -28,6 +26,14 @@ ISStego uses three steganography techniques:
 - **Least Significant Bit (LSB)**: ISStego takes the binary representation of each pixel of image and overwrites the LSB of some bytes with the bits of information using CoreGraphics framework;
 - **Sequential Colour Cycle (SCC)**: Each pixel has four bytes of information regarding the colors red, green and blue (RGB) and the channel alpha (transparency). With SCC, ISStego  embeds the bits of information, rotating the colour bytes.
 - **Uniform Distribution**: The bits of information are distributed uniformly throughout the image.
+
+## Examples
+### OS X
+[ISStego OSX Example](Examples/ISStego\ OSX\ Example)
+![exampleOSX](Examples/ISStegoOSXExample.gif)
+### iOS
+[ISStego iOS Example](Examples/ISStego\ iOS\ Example)
+![exampleiOS](Examples/ISStegoiOSExample.gif)
 
 ## Usage
 
