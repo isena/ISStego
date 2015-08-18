@@ -1,10 +1,17 @@
 # ISStego
 
-ISStego is an Objective-C library that can be used to encode and decode secret data with images using digital techniques of steganography, a form of security through obscurity.
+ISStego is an Objective-C library for Mac OS X & iOS that can be used to encode and decode secret data with images using digital techniques of steganography, a form of security through obscurity.
 
 ## What is Steganography?
 
 Steganography comes from the Greek words *steganos*, meaning **covered or protected**, and *graphein*, meaning **writing**. Basically it is the practice of hiding important information within a unimportant object. For instance we can hide a message within another message, image, audio or video. 
+
+See example:
+
+| original Image | Stego image | 
+| :---: | :---: | 
+| ![originalImage](Examples/originalImage.png) | ![originalImage](Examples/image.png) |
+| Pure image (without hidden information) | Image with a steganographically hidden text (3090 characters). |
 
 ### [Steganography isEqualTo:Encryption]?
 
@@ -18,6 +25,7 @@ On the other hand, steganography **hides the information itself** and most peopl
 
 Steganography is a form of security but it is not unique. We can (and we recommend using) use other forms of security, such as encryption, in addition to steganography.
 
+[See also](https://en.wikipedia.org/wiki/Steganography).
 
 ## How does ISStego work?
 
@@ -30,9 +38,11 @@ ISStego uses three steganography techniques:
 ## Examples
 ### OS X
 [ISStego OSX Example](Examples/ISStego\ OSX\ Example)
+
 ![exampleOSX](Examples/ISStegoOSXExample.gif)
 ### iOS
 [ISStego iOS Example](Examples/ISStego\ iOS\ Example)
+
 ![exampleiOS](Examples/ISStegoiOSExample.gif)
 
 ## Usage
