@@ -42,7 +42,8 @@ ISStego uses three steganography techniques:
 Drag the [ISStego](ISStego/) folder into your project.
 
 ###CocoaPods
-You can use [CocoaPods](http://cocoapods.org/?q=ISStego).
+
+Or you can use [CocoaPods](http://cocoapods.org/?q=ISStego).
 
 ```ruby
 pod 'ISStego'
