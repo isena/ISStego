@@ -47,12 +47,14 @@ ISStego uses three steganography techniques:
 
 ## Usage
 
-Import the ISSteganographer
+Import ISSteganographer
 ```objective-c
 #import "ISSteganographer.h"
 ```
 
-### Encode
+### iOS
+
+#### Encode
 
 ```objective-c
 NSString *encryptedPassword = @"47151d0e56f8dc";
@@ -61,7 +63,7 @@ UIImage *image  = [UIImage imageNamed:@"imageName"];
 
 [ISSteganographer hideData:encryptedPassword
                  withImage:image
-           completionBlock:^(UIImage *image, NSError *error) {
+           completionBlock:^(id image, NSError *error) {
                if (error) {
                    NSLog(@"error: %@", error);
                } else {
@@ -72,11 +74,60 @@ UIImage *image  = [UIImage imageNamed:@"imageName"];
 ```
 
 
-### Decode
-
+#### Decode
 
 ```objective-c
 UIImage *image  = [UIImage imageNamed:@"stegoImageName"];
+
+[ISSteganographer dataFromImage:image
+                completionBlock:^(NSData *data, NSError *error) {
+                    if (error) {
+                        NSLog(@"error: %@", error);
+                    } else {
+                        NSString *hiddenData = [[NSString alloc] initWithData:data
+                                                                     encoding:NSUTF8StringEncoding];
+                        NSLog(@"string: %@", hiddenData);
+                    }
+                }];
+```
+### Mac OS X
+
+#### Encode
+
+```objective-c
+NSString *encryptedPassword = @"47151d0e56f8dc";
+
+NSImage *image  = [NSImage imageNamed:@"imageName"];
+
+[ISSteganographer hideData:encryptedPassword
+                 withImage:image
+           completionBlock:^(id image, NSError *error) {
+               if (error) {
+                   NSLog(@"error: %@", error);
+               } else {
+                   CGImageRef cgRef = [image CGImageForProposedRect:NULL
+                                                            context:nil
+                                                              hints:nil];
+                   
+                   NSBitmapImageRep *bitmapImage = [[NSBitmapImageRep alloc] initWithCGImage:cgRef];
+                   
+                   [bitmapImage setSize:[image size]];
+                   
+                   NSData *pngData = [bitmapImage representationUsingType:NSPNGFileType
+                                                          properties:nil];
+                   
+                   [pngData writeToFile:@"PATH_OF_FILE"
+                             atomically:YES];
+                   
+                   bitmapImage = nil;
+               }
+           }];
+```
+
+#### Decode
+
+```objective-c
+NSImage *image  = [NSImage imageNamed:@"stegoImageName"];
 
 [ISSteganographer dataFromImage:image
                 completionBlock:^(NSData *data, NSError *error) {
