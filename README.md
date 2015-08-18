@@ -35,6 +35,20 @@ ISStego uses three steganography techniques:
 - **Sequential Colour Cycle (SCC)**: Each pixel has four bytes of information regarding the colors red, green and blue (RGB) and the channel alpha (transparency). With SCC, ISStego  embeds the bits of information, rotating the colour bytes.
 - **Uniform Distribution**: The bits of information are distributed uniformly throughout the image.
 
+## Installation
+
+### Manual
+
+Drag the [ISStego](ISStego/) folder into your project.
+
+###CocoaPods
+You can use [CocoaPods](http://cocoapods.org/?q=ISStego).
+
+```ruby
+pod 'CryptoSwift'
+```
+
+
 ## Examples
 ### OS X
 [ISStego OSX Example](Examples/ISStego\ OS\ X\ Example)
