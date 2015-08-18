@@ -1,0 +1,512 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DC6668CE1B801F9400EFFB43 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DC6668CD1B801F9400EFFB43 /* main.m */; };
+		DC6668D11B801F9400EFFB43 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DC6668D01B801F9400EFFB43 /* AppDelegate.m */; };
+		DC6668D71B801F9400EFFB43 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC6668D51B801F9400EFFB43 /* Main.storyboard */; };
+		DC6668D91B801F9400EFFB43 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC6668D81B801F9400EFFB43 /* Images.xcassets */; };
+		DC6668DC1B801F9400EFFB43 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC6668DA1B801F9400EFFB43 /* LaunchScreen.xib */; };
+		DC6668E81B801F9400EFFB43 /* ISStego_iOS_ExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DC6668E71B801F9400EFFB43 /* ISStego_iOS_ExampleTests.m */; };
+		DC6668FF1B8020C100EFFB43 /* ISSteganographer.m in Sources */ = {isa = PBXBuildFile; fileRef = DC6668F31B8020C100EFFB43 /* ISSteganographer.m */; };
+		DC6669001B8020C100EFFB43 /* ISStegoDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = DC6668F51B8020C100EFFB43 /* ISStegoDecoder.m */; };
+		DC6669011B8020C100EFFB43 /* ISStegoEncoder.m in Sources */ = {isa = PBXBuildFile; fileRef = DC6668F71B8020C100EFFB43 /* ISStegoEncoder.m */; };
+		DC6669021B8020C100EFFB43 /* ISPixelUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = DC6668FA1B8020C100EFFB43 /* ISPixelUtilities.m */; };
+		DC6669031B8020C100EFFB43 /* ISStegoDefaults.m in Sources */ = {isa = PBXBuildFile; fileRef = DC6668FC1B8020C100EFFB43 /* ISStegoDefaults.m */; };
+		DC6669041B8020C100EFFB43 /* ISStegoUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = DC6668FE1B8020C100EFFB43 /* ISStegoUtilities.m */; };
+		DC66690C1B80210B00EFFB43 /* ExtractViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC6669071B80210B00EFFB43 /* ExtractViewController.m */; };
+		DC66690D1B80210B00EFFB43 /* InsertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC6669091B80210B00EFFB43 /* InsertViewController.m */; };
+		DC66690E1B80210B00EFFB43 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC66690B1B80210B00EFFB43 /* ViewController.m */; };
+		DC6669111B80212B00EFFB43 /* ISUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = DC6669101B80212B00EFFB43 /* ISUtils.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DC6668E21B801F9400EFFB43 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DC6668C01B801F9400EFFB43 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DC6668C71B801F9400EFFB43;
+			remoteInfo = "ISStego iOS Example";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		DC6668C81B801F9400EFFB43 /* ISStego iOS Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ISStego iOS Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC6668CC1B801F9400EFFB43 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DC6668CD1B801F9400EFFB43 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		DC6668CF1B801F9400EFFB43 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		DC6668D01B801F9400EFFB43 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		DC6668D61B801F9400EFFB43 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DC6668D81B801F9400EFFB43 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		DC6668DB1B801F9400EFFB43 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		DC6668E11B801F9400EFFB43 /* ISStego iOS ExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ISStego iOS ExampleTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC6668E61B801F9400EFFB43 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DC6668E71B801F9400EFFB43 /* ISStego_iOS_ExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ISStego_iOS_ExampleTests.m; sourceTree = "<group>"; };
+		DC6668F21B8020C100EFFB43 /* ISSteganographer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ISSteganographer.h; sourceTree = "<group>"; };
+		DC6668F31B8020C100EFFB43 /* ISSteganographer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ISSteganographer.m; sourceTree = "<group>"; };
+		DC6668F41B8020C100EFFB43 /* ISStegoDecoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ISStegoDecoder.h; sourceTree = "<group>"; };
+		DC6668F51B8020C100EFFB43 /* ISStegoDecoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ISStegoDecoder.m; sourceTree = "<group>"; };
+		DC6668F61B8020C100EFFB43 /* ISStegoEncoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ISStegoEncoder.h; sourceTree = "<group>"; };
+		DC6668F71B8020C100EFFB43 /* ISStegoEncoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ISStegoEncoder.m; sourceTree = "<group>"; };
+		DC6668F91B8020C100EFFB43 /* ISPixelUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ISPixelUtilities.h; sourceTree = "<group>"; };
+		DC6668FA1B8020C100EFFB43 /* ISPixelUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ISPixelUtilities.m; sourceTree = "<group>"; };
+		DC6668FB1B8020C100EFFB43 /* ISStegoDefaults.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ISStegoDefaults.h; sourceTree = "<group>"; };
+		DC6668FC1B8020C100EFFB43 /* ISStegoDefaults.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ISStegoDefaults.m; sourceTree = "<group>"; };
+		DC6668FD1B8020C100EFFB43 /* ISStegoUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ISStegoUtilities.h; sourceTree = "<group>"; };
+		DC6668FE1B8020C100EFFB43 /* ISStegoUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ISStegoUtilities.m; sourceTree = "<group>"; };
+		DC6669061B80210B00EFFB43 /* ExtractViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExtractViewController.h; sourceTree = "<group>"; };
+		DC6669071B80210B00EFFB43 /* ExtractViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExtractViewController.m; sourceTree = "<group>"; };
+		DC6669081B80210B00EFFB43 /* InsertViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InsertViewController.h; sourceTree = "<group>"; };
+		DC6669091B80210B00EFFB43 /* InsertViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InsertViewController.m; sourceTree = "<group>"; };
+		DC66690A1B80210B00EFFB43 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		DC66690B1B80210B00EFFB43 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		DC66690F1B80212B00EFFB43 /* ISUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ISUtils.h; sourceTree = "<group>"; };
+		DC6669101B80212B00EFFB43 /* ISUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ISUtils.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DC6668C51B801F9400EFFB43 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DC6668DE1B801F9400EFFB43 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DC6668BF1B801F9400EFFB43 = {
+			isa = PBXGroup;
+			children = (
+				DC6668CA1B801F9400EFFB43 /* ISStego iOS Example */,
+				DC6668E41B801F9400EFFB43 /* ISStego iOS ExampleTests */,
+				DC6668C91B801F9400EFFB43 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DC6668C91B801F9400EFFB43 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DC6668C81B801F9400EFFB43 /* ISStego iOS Example.app */,
+				DC6668E11B801F9400EFFB43 /* ISStego iOS ExampleTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DC6668CA1B801F9400EFFB43 /* ISStego iOS Example */ = {
+			isa = PBXGroup;
+			children = (
+				DC6668CF1B801F9400EFFB43 /* AppDelegate.h */,
+				DC6668D01B801F9400EFFB43 /* AppDelegate.m */,
+				DC66690F1B80212B00EFFB43 /* ISUtils.h */,
+				DC6669101B80212B00EFFB43 /* ISUtils.m */,
+				DC6669051B80210B00EFFB43 /* ViewControllers */,
+				DC6668D51B801F9400EFFB43 /* Main.storyboard */,
+				DC6668D81B801F9400EFFB43 /* Images.xcassets */,
+				DC6668DA1B801F9400EFFB43 /* LaunchScreen.xib */,
+				DC6668F11B8020C100EFFB43 /* ISStego */,
+				DC6668CB1B801F9400EFFB43 /* Supporting Files */,
+			);
+			path = "ISStego iOS Example";
+			sourceTree = "<group>";
+		};
+		DC6668CB1B801F9400EFFB43 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DC6668CC1B801F9400EFFB43 /* Info.plist */,
+				DC6668CD1B801F9400EFFB43 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DC6668E41B801F9400EFFB43 /* ISStego iOS ExampleTests */ = {
+			isa = PBXGroup;
+			children = (
+				DC6668E71B801F9400EFFB43 /* ISStego_iOS_ExampleTests.m */,
+				DC6668E51B801F9400EFFB43 /* Supporting Files */,
+			);
+			path = "ISStego iOS ExampleTests";
+			sourceTree = "<group>";
+		};
+		DC6668E51B801F9400EFFB43 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DC6668E61B801F9400EFFB43 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DC6668F11B8020C100EFFB43 /* ISStego */ = {
+			isa = PBXGroup;
+			children = (
+				DC6668F21B8020C100EFFB43 /* ISSteganographer.h */,
+				DC6668F31B8020C100EFFB43 /* ISSteganographer.m */,
+				DC6668F41B8020C100EFFB43 /* ISStegoDecoder.h */,
+				DC6668F51B8020C100EFFB43 /* ISStegoDecoder.m */,
+				DC6668F61B8020C100EFFB43 /* ISStegoEncoder.h */,
+				DC6668F71B8020C100EFFB43 /* ISStegoEncoder.m */,
+				DC6668F81B8020C100EFFB43 /* Utilities */,
+			);
+			name = ISStego;
+			path = ../../../ISStego;
+			sourceTree = "<group>";
+		};
+		DC6668F81B8020C100EFFB43 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				DC6668F91B8020C100EFFB43 /* ISPixelUtilities.h */,
+				DC6668FA1B8020C100EFFB43 /* ISPixelUtilities.m */,
+				DC6668FB1B8020C100EFFB43 /* ISStegoDefaults.h */,
+				DC6668FC1B8020C100EFFB43 /* ISStegoDefaults.m */,
+				DC6668FD1B8020C100EFFB43 /* ISStegoUtilities.h */,
+				DC6668FE1B8020C100EFFB43 /* ISStegoUtilities.m */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		DC6669051B80210B00EFFB43 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				DC66690A1B80210B00EFFB43 /* ViewController.h */,
+				DC66690B1B80210B00EFFB43 /* ViewController.m */,
+				DC6669081B80210B00EFFB43 /* InsertViewController.h */,
+				DC6669091B80210B00EFFB43 /* InsertViewController.m */,
+				DC6669061B80210B00EFFB43 /* ExtractViewController.h */,
+				DC6669071B80210B00EFFB43 /* ExtractViewController.m */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DC6668C71B801F9400EFFB43 /* ISStego iOS Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DC6668EB1B801F9400EFFB43 /* Build configuration list for PBXNativeTarget "ISStego iOS Example" */;
+			buildPhases = (
+				DC6668C41B801F9400EFFB43 /* Sources */,
+				DC6668C51B801F9400EFFB43 /* Frameworks */,
+				DC6668C61B801F9400EFFB43 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "ISStego iOS Example";
+			productName = "ISStego iOS Example";
+			productReference = DC6668C81B801F9400EFFB43 /* ISStego iOS Example.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DC6668E01B801F9400EFFB43 /* ISStego iOS ExampleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DC6668EE1B801F9400EFFB43 /* Build configuration list for PBXNativeTarget "ISStego iOS ExampleTests" */;
+			buildPhases = (
+				DC6668DD1B801F9400EFFB43 /* Sources */,
+				DC6668DE1B801F9400EFFB43 /* Frameworks */,
+				DC6668DF1B801F9400EFFB43 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DC6668E31B801F9400EFFB43 /* PBXTargetDependency */,
+			);
+			name = "ISStego iOS ExampleTests";
+			productName = "ISStego iOS ExampleTests";
+			productReference = DC6668E11B801F9400EFFB43 /* ISStego iOS ExampleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DC6668C01B801F9400EFFB43 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0640;
+				ORGANIZATIONNAME = iSena;
+				TargetAttributes = {
+					DC6668C71B801F9400EFFB43 = {
+						CreatedOnToolsVersion = 6.4;
+					};
+					DC6668E01B801F9400EFFB43 = {
+						CreatedOnToolsVersion = 6.4;
+						TestTargetID = DC6668C71B801F9400EFFB43;
+					};
+				};
+			};
+			buildConfigurationList = DC6668C31B801F9400EFFB43 /* Build configuration list for PBXProject "ISStego iOS Example" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DC6668BF1B801F9400EFFB43;
+			productRefGroup = DC6668C91B801F9400EFFB43 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DC6668C71B801F9400EFFB43 /* ISStego iOS Example */,
+				DC6668E01B801F9400EFFB43 /* ISStego iOS ExampleTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DC6668C61B801F9400EFFB43 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC6668D71B801F9400EFFB43 /* Main.storyboard in Resources */,
+				DC6668DC1B801F9400EFFB43 /* LaunchScreen.xib in Resources */,
+				DC6668D91B801F9400EFFB43 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DC6668DF1B801F9400EFFB43 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DC6668C41B801F9400EFFB43 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC6669021B8020C100EFFB43 /* ISPixelUtilities.m in Sources */,
+				DC6669111B80212B00EFFB43 /* ISUtils.m in Sources */,
+				DC6669031B8020C100EFFB43 /* ISStegoDefaults.m in Sources */,
+				DC6669011B8020C100EFFB43 /* ISStegoEncoder.m in Sources */,
+				DC6669001B8020C100EFFB43 /* ISStegoDecoder.m in Sources */,
+				DC6668D11B801F9400EFFB43 /* AppDelegate.m in Sources */,
+				DC66690E1B80210B00EFFB43 /* ViewController.m in Sources */,
+				DC6669041B8020C100EFFB43 /* ISStegoUtilities.m in Sources */,
+				DC6668CE1B801F9400EFFB43 /* main.m in Sources */,
+				DC66690D1B80210B00EFFB43 /* InsertViewController.m in Sources */,
+				DC6668FF1B8020C100EFFB43 /* ISSteganographer.m in Sources */,
+				DC66690C1B80210B00EFFB43 /* ExtractViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DC6668DD1B801F9400EFFB43 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC6668E81B801F9400EFFB43 /* ISStego_iOS_ExampleTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DC6668E31B801F9400EFFB43 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DC6668C71B801F9400EFFB43 /* ISStego iOS Example */;
+			targetProxy = DC6668E21B801F9400EFFB43 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		DC6668D51B801F9400EFFB43 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DC6668D61B801F9400EFFB43 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		DC6668DA1B801F9400EFFB43 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DC6668DB1B801F9400EFFB43 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DC6668E91B801F9400EFFB43 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		DC6668EA1B801F9400EFFB43 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DC6668EC1B801F9400EFFB43 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "ISStego iOS Example/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		DC6668ED1B801F9400EFFB43 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "ISStego iOS Example/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		DC6668EF1B801F9400EFFB43 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "ISStego iOS ExampleTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ISStego iOS Example.app/ISStego iOS Example";
+			};
+			name = Debug;
+		};
+		DC6668F01B801F9400EFFB43 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "ISStego iOS ExampleTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ISStego iOS Example.app/ISStego iOS Example";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DC6668C31B801F9400EFFB43 /* Build configuration list for PBXProject "ISStego iOS Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DC6668E91B801F9400EFFB43 /* Debug */,
+				DC6668EA1B801F9400EFFB43 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DC6668EB1B801F9400EFFB43 /* Build configuration list for PBXNativeTarget "ISStego iOS Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DC6668EC1B801F9400EFFB43 /* Debug */,
+				DC6668ED1B801F9400EFFB43 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DC6668EE1B801F9400EFFB43 /* Build configuration list for PBXNativeTarget "ISStego iOS ExampleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DC6668EF1B801F9400EFFB43 /* Debug */,
+				DC6668F01B801F9400EFFB43 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DC6668C01B801F9400EFFB43 /* Project object */;
+}
