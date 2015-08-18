@@ -63,12 +63,12 @@ NSString *type() {
                                              context:nil
                                                hints:nil];
     
-    NSBitmapImageRep *newRep = [[NSBitmapImageRep alloc] initWithCGImage:cgRef];
+    NSBitmapImageRep *bitmapImage = [[NSBitmapImageRep alloc] initWithCGImage:cgRef];
     
-    [newRep setSize:[image size]];
+    [bitmapImage setSize:[image size]];
     
-    NSData *pngData = [newRep representationUsingType:NSPNGFileType
-                                           properties:nil];
+    NSData *pngData = [bitmapImage representationUsingType:NSPNGFileType
+                                                properties:nil];
     
     return [pngData writeToFile:path atomically:YES];
 #endif
