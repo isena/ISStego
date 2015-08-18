@@ -45,7 +45,7 @@ Drag the [ISStego](ISStego/) folder into your project.
 You can use [CocoaPods](http://cocoapods.org/?q=ISStego).
 
 ```ruby
-pod 'CryptoSwift'
+pod 'ISStego'
 ```
 
 
