@@ -37,7 +37,7 @@ ISStego uses three steganography techniques:
 
 ## Examples
 ### OS X
-[ISStego OSX Example](Examples/ISStego\ OSX\ Example)
+[ISStego OSX Example](Examples/ISStego\ OS\ X\ Example)
 
 ![exampleOSX](Examples/ISStegoOSXExample.gif)
 ### iOS
