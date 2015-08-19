@@ -66,13 +66,13 @@ Steganography comes from the Greek word and means "covered or protected". Basica
   #  the deployment target. You can optionally include the target after the platform.
   #
 
-    s.platform     = :ios
-    s.platform     = :osx
+  # s.platform     = :ios
+  # s.platform     = :osx
   # s.platform     = :ios, "5.0"
 
   #  When using multiple platforms
-  # s.ios.deployment_target = "5.0"
-  # s.osx.deployment_target = "10.7"
+  s.ios.deployment_target = "7.0"
+  s.osx.deployment_target = "10.7"
 
 
   # ――― Source Location ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
