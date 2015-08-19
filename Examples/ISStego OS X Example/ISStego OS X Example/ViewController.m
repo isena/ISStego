@@ -86,7 +86,7 @@
 - (void)saveImage:(NSImage *)image {
     NSSavePanel *panel = [NSSavePanel savePanel];
 
-    [panel setNameFieldStringValue:@"image.png"];
+    [panel setNameFieldStringValue:@"STEGO_IMAGE.png"];
 
     [panel beginWithCompletionHandler:^(NSInteger result) {
         if (result == NSFileHandlingPanelOKButton) {

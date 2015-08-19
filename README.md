@@ -10,7 +10,7 @@ See example:
 
 | original Image | Stego image | 
 | :---: | :---: | 
-| ![originalImage](Examples/originalImage.png) | ![originalImage](Examples/image.png) |
+| ![ORIGINAL_IMAGE](Examples/ORIGINAL_IMAGE.png) | ![STEGO_IMAGE](Examples/STEGO_IMAGE.png) |
 | Pure image (without hidden information) | Image with a steganographically hidden text (3090 characters). |
 
 ### [Steganography isEqualTo:Encryption]?
@@ -54,11 +54,11 @@ pod 'ISStego'
 ### OS X
 [ISStego OSX Example](Examples/ISStego\ OS\ X\ Example)
 
-![exampleOSX](Examples/ISStegoOSXExample.gif)
+![exampleOSX](Examples/ISStego_OS_X_Example.gif)
 ### iOS
 [ISStego iOS Example](Examples/ISStego\ iOS\ Example)
 
-![exampleiOS](Examples/ISStegoiOSExample.gif)
+![exampleiOS](Examples/ISStego_iOS_Example.gif)
 
 ## Usage
 
