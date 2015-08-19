@@ -52,7 +52,7 @@ pod 'ISStego'
 
 ## Examples
 ### OS X
-[ISStego OSX Example](Examples/ISStego\ OS\ X\ Example)
+[ISStego OS X Example](Examples/ISStego\ OS\ X\ Example)
 
 ![exampleOSX](Examples/ISStego_OS_X_Example.gif)
 ### iOS
