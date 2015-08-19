@@ -10,7 +10,7 @@ See example:
 
 | original Image | Stego image | 
 | :---: | :---: | 
-| ![ORIGINAL_IMAGE](Examples/ORIGINAL_IMAGE.png) | ![STEGO_IMAGE](Examples/STEGO_IMAGE.png) |
+| ![ORIGINAL_IMAGE](Examples/ORIGINAL_IMAGE.png =300×225) | ![STEGO_IMAGE](Examples/STEGO_IMAGE.png =300×225) |
 | Pure image (without hidden information) | Image with a steganographically hidden text (3360 characters). |
 
 ### [Steganography isEqualTo:Encryption]?
