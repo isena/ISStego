@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "ISStego"
-  s.version      = "0.0.2"
+  s.version      = "0.0.3"
   s.summary      = "Objective-C wrapper for Steganography."
 
   s.description  = <<-DESC
@@ -81,7 +81,7 @@ Steganography comes from the Greek word and means "covered or protected". Basica
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/isena/ISStego.git", :tag => "0.0.2" }
+  s.source       = { :git => "https://github.com/isena/ISStego.git", :tag => "0.0.3" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
