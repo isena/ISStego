@@ -11,7 +11,7 @@ See example:
 | original Image | Stego image | 
 | :---: | :---: | 
 | ![ORIGINAL_IMAGE](Examples/ORIGINAL_IMAGE.png) | ![STEGO_IMAGE](Examples/STEGO_IMAGE.png) |
-| Pure image (without hidden information) | Image with a steganographically hidden text (3090 characters). |
+| Pure image (without hidden information) | Image with a steganographically hidden text (3360 characters). |
 
 ### [Steganography isEqualTo:Encryption]?
 
