@@ -13,20 +13,20 @@ NSString *const STEGO_IMAGE_NAME = @"STEGO_IMAGE.png";
 @implementation ISUtils
 
 + (void)showMessage:(NSString*)message {
-    if (![NSThread isMainThread]) {
-        [self performSelectorOnMainThread:@selector(showMessage:)
-                               withObject:message
-                            waitUntilDone:NO];
-        return;
-    }
-    
-    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:nil
-                                                        message:message
-                                                       delegate:nil
-                                              cancelButtonTitle:@"ok"
-                                              otherButtonTitles:nil];
-    [alertView show];
-    alertView = nil;
+  if (![NSThread isMainThread]) {
+    [self performSelectorOnMainThread:@selector(showMessage:)
+                           withObject:message
+                        waitUntilDone:NO];
+    return;
+  }
+  
+  UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:nil
+                                                      message:message
+                                                     delegate:nil
+                                            cancelButtonTitle:@"ok"
+                                            otherButtonTitles:nil];
+  [alertView show];
+  alertView = nil;
 }
 
 @end

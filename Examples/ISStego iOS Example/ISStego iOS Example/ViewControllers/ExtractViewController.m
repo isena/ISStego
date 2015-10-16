@@ -20,45 +20,48 @@
 @implementation ExtractViewController
 
 - (void)viewDidLoad {
-    [super viewDidLoad];
-    
-    [self configureStegoObject];
+  [super viewDidLoad];
+  
+  [self configureStegoObject];
 }
 
 - (void)configureStegoObject {
-    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    NSString *filePath = [[paths objectAtIndex:0] stringByAppendingPathComponent:STEGO_IMAGE_NAME];
-    
-    UIImage *image = [UIImage imageWithContentsOfFile:filePath];
-    
-    if (image) {
-        self.imageView.image = image;
-    } else {
-        [ISUtils showMessage:@"No Stego-object!"];
-        [self.navigationController popViewControllerAnimated:YES];
-    }
+  NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+  NSString *filePath = [[paths objectAtIndex:0] stringByAppendingPathComponent:STEGO_IMAGE_NAME];
+  
+  UIImage *image = [UIImage imageWithContentsOfFile:filePath];
+  
+  if (image) {
+    self.imageView.image = image;
+  } else {
+    [ISUtils showMessage:@"No Stego-object!"];
+    [self.navigationController popViewControllerAnimated:YES];
+  }
 }
 
 - (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
+  [super didReceiveMemoryWarning];
 }
 
 - (IBAction)extract {
-    [ISSteganographer dataFromImage:self.imageView.image
-                    completionBlock:^(NSData *data, NSError *error) {
-                        if (error) {
-                            [ISUtils showMessage:[NSString stringWithFormat:@"%@", error]];
-                        } else {
-                            [self showData:data];
-                        }
-                    }];
+  NSString *password = @"password";
+
+  [ISSteganographer dataFromImage:self.imageView.image
+                         password:password
+                  completionBlock:^(NSData *data, NSError *error) {
+                    if (error) {
+                      [ISUtils showMessage:[NSString stringWithFormat:@"%@", error]];
+                    } else {
+                      [self showData:data];
+                    }
+                  }];
 }
 
 - (void)showData:(NSData *)data {
-    NSString *string = [[NSString alloc] initWithData:data
-                                             encoding:NSUTF8StringEncoding];
-    
-    [ISUtils showMessage:string];
+  NSString *string = [[NSString alloc] initWithData:data
+                                           encoding:NSUTF8StringEncoding];
+  
+  [ISUtils showMessage:string];
 }
 
 @end

@@ -8,15 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		47300C9CA8BE654929ECC90D /* libPods-osx.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 65D5B26287A6868F1618BF06 /* libPods-osx.a */; };
-		DC11C2521B80000400851280 /* image.png in Resources */ = {isa = PBXBuildFile; fileRef = DC11C2481B80000400851280 /* image.png */; };
-		DC11C2531B80000400851280 /* image_100x100.png in Resources */ = {isa = PBXBuildFile; fileRef = DC11C2491B80000400851280 /* image_100x100.png */; };
-		DC11C2541B80000400851280 /* image_8x8.png in Resources */ = {isa = PBXBuildFile; fileRef = DC11C24A1B80000400851280 /* image_8x8.png */; };
 		DC11C2551B80000400851280 /* stegoImage.png in Resources */ = {isa = PBXBuildFile; fileRef = DC11C24B1B80000400851280 /* stegoImage.png */; };
 		DC11C25A1B80000400851280 /* ISTestUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = DC11C2511B80000400851280 /* ISTestUtilities.m */; };
 		DC11C26F1B80081E00851280 /* ISTestUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = DC11C2511B80000400851280 /* ISTestUtilities.m */; };
-		DC11C2701B800A9C00851280 /* image.png in Resources */ = {isa = PBXBuildFile; fileRef = DC11C2481B80000400851280 /* image.png */; };
-		DC11C2711B800A9C00851280 /* image_100x100.png in Resources */ = {isa = PBXBuildFile; fileRef = DC11C2491B80000400851280 /* image_100x100.png */; };
-		DC11C2721B800A9C00851280 /* image_8x8.png in Resources */ = {isa = PBXBuildFile; fileRef = DC11C24A1B80000400851280 /* image_8x8.png */; };
 		DC11C2731B800A9C00851280 /* stegoImage.png in Resources */ = {isa = PBXBuildFile; fileRef = DC11C24B1B80000400851280 /* stegoImage.png */; };
 		DC11C27B1B80197300851280 /* ISSteganographerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = DC11C2781B80197300851280 /* ISSteganographerTest.m */; };
 		DC11C27C1B80197300851280 /* ISSteganographerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = DC11C2781B80197300851280 /* ISSteganographerTest.m */; };
@@ -24,6 +18,14 @@
 		DC11C27E1B80197300851280 /* ISStegoDecoderTest.m in Sources */ = {isa = PBXBuildFile; fileRef = DC11C2791B80197300851280 /* ISStegoDecoderTest.m */; };
 		DC11C27F1B80197300851280 /* ISStegoEncoderTest.m in Sources */ = {isa = PBXBuildFile; fileRef = DC11C27A1B80197300851280 /* ISStegoEncoderTest.m */; };
 		DC11C2801B80197300851280 /* ISStegoEncoderTest.m in Sources */ = {isa = PBXBuildFile; fileRef = DC11C27A1B80197300851280 /* ISStegoEncoderTest.m */; };
+		DC7C61D51BC1FAB400A98D2D /* image_2x2.png in Resources */ = {isa = PBXBuildFile; fileRef = DC7C61D21BC1FAB400A98D2D /* image_2x2.png */; settings = {ASSET_TAGS = (); }; };
+		DC7C61D61BC1FAB400A98D2D /* image_2x2.png in Resources */ = {isa = PBXBuildFile; fileRef = DC7C61D21BC1FAB400A98D2D /* image_2x2.png */; settings = {ASSET_TAGS = (); }; };
+		DC7C61D71BC1FAB400A98D2D /* image_200x150.png in Resources */ = {isa = PBXBuildFile; fileRef = DC7C61D31BC1FAB400A98D2D /* image_200x150.png */; settings = {ASSET_TAGS = (); }; };
+		DC7C61D81BC1FAB400A98D2D /* image_200x150.png in Resources */ = {isa = PBXBuildFile; fileRef = DC7C61D31BC1FAB400A98D2D /* image_200x150.png */; settings = {ASSET_TAGS = (); }; };
+		DC7C61D91BC1FAB400A98D2D /* originalImage_1024×768.png in Resources */ = {isa = PBXBuildFile; fileRef = DC7C61D41BC1FAB400A98D2D /* originalImage_1024×768.png */; settings = {ASSET_TAGS = (); }; };
+		DC7C61DA1BC1FAB400A98D2D /* originalImage_1024×768.png in Resources */ = {isa = PBXBuildFile; fileRef = DC7C61D41BC1FAB400A98D2D /* originalImage_1024×768.png */; settings = {ASSET_TAGS = (); }; };
+		DCD73E021BB6F5330086DB06 /* ISStegoUtilitiesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DCD73E011BB6F5330086DB06 /* ISStegoUtilitiesTests.m */; settings = {ASSET_TAGS = (); }; };
+		DCD73E031BB6F5330086DB06 /* ISStegoUtilitiesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DCD73E011BB6F5330086DB06 /* ISStegoUtilitiesTests.m */; settings = {ASSET_TAGS = (); }; };
 		F4E5EA49BDAADBEC1A374549 /* libPods-ios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 447BD43FF31173F97684F36B /* libPods-ios.a */; };
 /* End PBXBuildFile section */
 
@@ -36,9 +38,6 @@
 		85D21D806500EE979FE63E4D /* Pods-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios.release.xcconfig"; path = "Pods/Target Support Files/Pods-ios/Pods-ios.release.xcconfig"; sourceTree = "<group>"; };
 		DC11C23C1B7FFEB000851280 /* iOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "iOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC11C2401B7FFEB000851280 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DC11C2481B80000400851280 /* image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image.png; sourceTree = "<group>"; };
-		DC11C2491B80000400851280 /* image_100x100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image_100x100.png; sourceTree = "<group>"; };
-		DC11C24A1B80000400851280 /* image_8x8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image_8x8.png; sourceTree = "<group>"; };
 		DC11C24B1B80000400851280 /* stegoImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stegoImage.png; sourceTree = "<group>"; };
 		DC11C2501B80000400851280 /* ISTestUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ISTestUtilities.h; sourceTree = "<group>"; };
 		DC11C2511B80000400851280 /* ISTestUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ISTestUtilities.m; sourceTree = "<group>"; };
@@ -48,6 +47,10 @@
 		DC11C2781B80197300851280 /* ISSteganographerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ISSteganographerTest.m; sourceTree = "<group>"; };
 		DC11C2791B80197300851280 /* ISStegoDecoderTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ISStegoDecoderTest.m; sourceTree = "<group>"; };
 		DC11C27A1B80197300851280 /* ISStegoEncoderTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ISStegoEncoderTest.m; sourceTree = "<group>"; };
+		DC7C61D21BC1FAB400A98D2D /* image_2x2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image_2x2.png; sourceTree = "<group>"; };
+		DC7C61D31BC1FAB400A98D2D /* image_200x150.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image_200x150.png; sourceTree = "<group>"; };
+		DC7C61D41BC1FAB400A98D2D /* originalImage_1024×768.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "originalImage_1024×768.png"; sourceTree = "<group>"; };
+		DCD73E011BB6F5330086DB06 /* ISStegoUtilitiesTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ISStegoUtilitiesTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,8 +114,9 @@
 			isa = PBXGroup;
 			children = (
 				DC11C2781B80197300851280 /* ISSteganographerTest.m */,
-				DC11C2791B80197300851280 /* ISStegoDecoderTest.m */,
 				DC11C27A1B80197300851280 /* ISStegoEncoderTest.m */,
+				DC11C2791B80197300851280 /* ISStegoDecoderTest.m */,
+				DCD73E011BB6F5330086DB06 /* ISStegoUtilitiesTests.m */,
 				DC11C2501B80000400851280 /* ISTestUtilities.h */,
 				DC11C2511B80000400851280 /* ISTestUtilities.m */,
 				DC11C2471B80000400851280 /* images */,
@@ -123,9 +127,9 @@
 		DC11C2471B80000400851280 /* images */ = {
 			isa = PBXGroup;
 			children = (
-				DC11C2481B80000400851280 /* image.png */,
-				DC11C2491B80000400851280 /* image_100x100.png */,
-				DC11C24A1B80000400851280 /* image_8x8.png */,
+				DC7C61D21BC1FAB400A98D2D /* image_2x2.png */,
+				DC7C61D31BC1FAB400A98D2D /* image_200x150.png */,
+				DC7C61D41BC1FAB400A98D2D /* originalImage_1024×768.png */,
 				DC11C24B1B80000400851280 /* stegoImage.png */,
 			);
 			path = images;
@@ -215,7 +219,7 @@
 		DC11C2321B7FFE4900851280 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0640;
+				LastUpgradeCheck = 0700;
 				TargetAttributes = {
 					DC11C23B1B7FFEB000851280 = {
 						CreatedOnToolsVersion = 6.4;
@@ -248,10 +252,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DC11C2531B80000400851280 /* image_100x100.png in Resources */,
-				DC11C2521B80000400851280 /* image.png in Resources */,
+				DC7C61D71BC1FAB400A98D2D /* image_200x150.png in Resources */,
+				DC7C61D51BC1FAB400A98D2D /* image_2x2.png in Resources */,
 				DC11C2551B80000400851280 /* stegoImage.png in Resources */,
-				DC11C2541B80000400851280 /* image_8x8.png in Resources */,
+				DC7C61D91BC1FAB400A98D2D /* originalImage_1024×768.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,10 +263,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DC11C2711B800A9C00851280 /* image_100x100.png in Resources */,
-				DC11C2701B800A9C00851280 /* image.png in Resources */,
+				DC7C61D81BC1FAB400A98D2D /* image_200x150.png in Resources */,
+				DC7C61D61BC1FAB400A98D2D /* image_2x2.png in Resources */,
 				DC11C2731B800A9C00851280 /* stegoImage.png in Resources */,
-				DC11C2721B800A9C00851280 /* image_8x8.png in Resources */,
+				DC7C61DA1BC1FAB400A98D2D /* originalImage_1024×768.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -338,6 +342,7 @@
 			files = (
 				DC11C25A1B80000400851280 /* ISTestUtilities.m in Sources */,
 				DC11C27F1B80197300851280 /* ISStegoEncoderTest.m in Sources */,
+				DCD73E021BB6F5330086DB06 /* ISStegoUtilitiesTests.m in Sources */,
 				DC11C27B1B80197300851280 /* ISSteganographerTest.m in Sources */,
 				DC11C27D1B80197300851280 /* ISStegoDecoderTest.m in Sources */,
 			);
@@ -349,6 +354,7 @@
 			files = (
 				DC11C2801B80197300851280 /* ISStegoEncoderTest.m in Sources */,
 				DC11C27C1B80197300851280 /* ISSteganographerTest.m in Sources */,
+				DCD73E031BB6F5330086DB06 /* ISStegoUtilitiesTests.m in Sources */,
 				DC11C26F1B80081E00851280 /* ISTestUtilities.m in Sources */,
 				DC11C27E1B80197300851280 /* ISStegoDecoderTest.m in Sources */,
 			);
@@ -360,8 +366,10 @@
 		DC11C2361B7FFE4900851280 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ENABLE_TESTABILITY = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
 			};
 			name = Debug;
 		};
@@ -418,6 +426,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.isena.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 			};
@@ -461,6 +470,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.isena.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -490,7 +500,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				FRAMEWORK_SEARCH_PATHS = (
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 				);
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -514,6 +524,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.isena.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 			};
@@ -543,7 +554,7 @@
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				FRAMEWORK_SEARCH_PATHS = (
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 				);
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -559,6 +570,7 @@
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.isena.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 			};

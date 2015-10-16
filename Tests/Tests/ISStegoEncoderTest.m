@@ -9,6 +9,7 @@
 #import <XCTest/XCTest.h>
 #import "ISStegoEncoder.h"
 #import "ISTestUtilities.h"
+#import "ISStegoUtilities.h"
 
 @interface ISStegoEncoderTest : XCTestCase
 
@@ -17,111 +18,156 @@
 @implementation ISStegoEncoderTest
 
 - (void)testStegoImageEncode {
-    id image  = [ISTestUtilities imageNamed:ORIGINAL_IMAGE_NAME];
-    
-    XCTAssertNotNil(image, @"image is nil");
-    
-    ISStegoEncoder *encoder = [[ISStegoEncoder alloc] init];
-    
-    NSError *error = nil;
-    
-    id stegoImage = [encoder stegoImageForImage:image
-                                           data:TEXT_TO_HIDE
-                                          error:&error];
-    
-    XCTAssertNotNil(stegoImage, @"stegoImage is nil");
-    
-    XCTAssertNil(error, @"error isn't nil");
-    
-    encoder = nil;
+  NSString *imageName = IMAGE_NAME;
+  NSString *password = PASSWORD;
+  NSString *textToHide = TEXT_TO_HIDE;
+  NSInteger channelsToEncode = ISChannelsToEncode(YES, YES, YES, NO);
+  id initialImage = [ISTestUtilities imageNamed:imageName];
+  
+  XCTAssertNotNil(initialImage, @"image is nil");
+  
+  ISStegoEncoder *encoder = [[ISStegoEncoder alloc] init];
+  
+  NSError *error = nil;
+  
+  id stegoImage = [encoder hideData:textToHide
+                              image:initialImage
+                           password:password
+                           channels:channelsToEncode
+                              error:&error];
+  
+  XCTAssertNotNil(stegoImage, @"stegoImage is nil");
+  
+  XCTAssertNil(error, @"%@", error);
+  
+  encoder = nil;
 }
 
 - (void)testStegoBigImageEncode {
-    id image  = [ISTestUtilities imageNamed:BIG_IMAGE_NAME];
-    
-    XCTAssertNotNil(image, @"image is nil");
-    
-    ISStegoEncoder *encoder = [[ISStegoEncoder alloc] init];
-    
-    NSError *error = nil;
-    
-    id stegoImage = [encoder stegoImageForImage:image
-                                           data:BIG_TEXT_TO_HIDE
-                                          error:&error];
-    
-    XCTAssertNotNil(stegoImage, @"stegoImage is nil");
-    
-    XCTAssertNil(error, @"error isn't nil");
-    
-    encoder = nil;
+  NSString *imageName = BIG_IMAGE_NAME;
+  NSString *password = PASSWORD;
+  NSString *textToHide = TEXT_TO_HIDE;
+  NSInteger channelsToEncode = ISChannelsToEncode(YES, YES, YES, NO);
+  id initialImage = [ISTestUtilities imageNamed:imageName];
+  
+  XCTAssertNotNil(initialImage, @"image is nil");
+  
+  ISStegoEncoder *encoder = [[ISStegoEncoder alloc] init];
+  
+  NSError *error = nil;
+  
+  id stegoImage = [encoder hideData:textToHide
+                              image:initialImage
+                           password:password
+                           channels:channelsToEncode
+                              error:&error];
+  
+  XCTAssertNotNil(stegoImage, @"stegoImage is nil");
+  
+  XCTAssertNil(error, @"%@", error);
+  
+  encoder = nil;
 }
+
+#pragma mark - Errors
 
 - (void)testStegoImageEncodeError {
-    id image  = [ISTestUtilities imageNamed:ORIGINAL_IMAGE_NAME];
-    
-    XCTAssertNotNil(image, @"image is nil");
-    
-    ISStegoEncoder *encoder = [[ISStegoEncoder alloc] init];
-    
-    NSError *error = nil;
-    
-    id stegoImage = [encoder stegoImageForImage:image
-                                           data:BIG_TEXT_TO_HIDE
-                                          error:&error];
-    
-    XCTAssertNil(stegoImage, @"stegoImage is nil");
-    
-    XCTAssertNotNil(error, @"error isn't nil");
-    
-    encoder = nil;
+  NSString *imageName = SMALL_IMAGE_NAME;
+  NSString *password = PASSWORD;
+  NSString *textToHide = BIG_TEXT_TO_HIDE;
+  NSInteger channelsToEncode = ISChannelsToEncode(YES, YES, YES, NO);
+  id initialImage = [ISTestUtilities imageNamed:imageName];
+  
+  XCTAssertNotNil(initialImage, @"image is nil");
+  
+  ISStegoEncoder *encoder = [[ISStegoEncoder alloc] init];
+  
+  NSError *error = nil;
+  
+  id stegoImage = [encoder hideData:textToHide
+                              image:initialImage
+                           password:password
+                           channels:channelsToEncode
+                              error:&error];
+  
+  XCTAssertNil(stegoImage, @"stegoImage isn't nil");
+  
+  XCTAssertNotNil(error, @"error is nil");
+  
+  encoder = nil;
 }
 
-#pragma mark - Exception
-
 - (void)testNilImage {
-    ISStegoEncoder *encoder = [[ISStegoEncoder alloc] init];
-    
-    NSError *error = nil;
-    
-    XCTAssertThrows([encoder stegoImageForImage:nil
-                                           data:TEXT_TO_HIDE
-                                          error:&error]);
-    
-    encoder = nil;
+  NSString *password = PASSWORD;
+  NSString *textToHide = BIG_TEXT_TO_HIDE;
+  NSInteger channelsToEncode = ISChannelsToEncode(YES, YES, YES, NO);
+  id initialImage = nil;
+  
+  ISStegoEncoder *encoder = [[ISStegoEncoder alloc] init];
+  
+  NSError *error = nil;
+  
+  id stegoImage = [encoder hideData:textToHide
+                              image:initialImage
+                           password:password
+                           channels:channelsToEncode
+                              error:&error];
+  
+  XCTAssertNil(stegoImage, @"stegoImage isn't nil");
+  
+  XCTAssertNotNil(error, @"error is nil");
+  
+  encoder = nil;
 }
 
 - (void)testImageTooSmall {
-    id image  = [ISTestUtilities imageNamed:SMALL_IMAGE_NAME];
-    
-    XCTAssertNotNil(image, @"image is nil");
-    
-    ISStegoEncoder *encoder = [[ISStegoEncoder alloc] init];
-    
-    NSError *error = nil;
-    
-    [encoder stegoImageForImage:image
-                           data:TEXT_TO_HIDE
-                          error:&error];
-    
-    XCTAssertNotNil(error);
-    
-    encoder = nil;
+  NSString *imageName = SMALL_IMAGE_NAME;
+  NSString *password = PASSWORD;
+  NSString *textToHide = TEXT_TO_HIDE;
+  NSInteger channelsToEncode = ISChannelsToEncode(YES, YES, YES, NO);
+  id initialImage = [ISTestUtilities imageNamed:imageName];
+  
+  XCTAssertNotNil(initialImage, @"image is nil");
+  
+  ISStegoEncoder *encoder = [[ISStegoEncoder alloc] init];
+  
+  NSError *error = nil;
+  
+  id stegoImage = [encoder hideData:textToHide
+                              image:initialImage
+                           password:password
+                           channels:channelsToEncode
+                              error:&error];
+  
+  
+  XCTAssertNil(stegoImage, @"image is not nil");
+  XCTAssertNotNil(error);
+  
+  encoder = nil;
 }
 
 - (void)testNilData {
-    id image  = [ISTestUtilities imageNamed:ORIGINAL_IMAGE_NAME];
-    
-    XCTAssertNotNil(image, @"image is nil");
-    
-    ISStegoEncoder *encoder = [[ISStegoEncoder alloc] init];
-    
-    NSError *error = nil;
-    
-    XCTAssertThrows([encoder stegoImageForImage:image
-                                           data:nil
-                                          error:&error]);
-    
-    encoder = nil;
+  NSString *imageName = IMAGE_NAME;
+  NSString *password = PASSWORD;
+  NSString *textToHide = nil;
+  NSInteger channelsToEncode = ISChannelsToEncode(YES, YES, YES, NO);
+  id initialImage = [ISTestUtilities imageNamed:imageName];
+  
+  ISStegoEncoder *encoder = [[ISStegoEncoder alloc] init];
+  
+  NSError *error = nil;
+  
+  id stegoImage = [encoder hideData:textToHide
+                              image:initialImage
+                           password:password
+                           channels:channelsToEncode
+                              error:&error];
+  
+  
+  XCTAssertNil(stegoImage, @"image is not nil");
+  XCTAssertNotNil(error);
+  
+  encoder = nil;
 }
 
 @end

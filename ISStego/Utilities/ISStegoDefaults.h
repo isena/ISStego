@@ -8,16 +8,16 @@
 
 #import <Foundation/Foundation.h>
 
-extern int const INITIAL_SHIFT;
-
 extern int const BYTES_PER_PIXEL;
 extern int const BITS_PER_COMPONENT;
 
-extern int const BYTES_OF_LENGTH;
+extern size_t const SIZE_BYTES_OF_LENGTH;
 
-extern NSString *const DATA_PREFIX;
-extern NSString *const DATA_SUFFIX;
+extern size_t const SIZE_BITS_OF_CHANNELS;
 
-int SizeOfInfoLength();
+extern Byte const ISSTEGO_ALGORITHM_VERSION;
+extern size_t const SIZE_ALGORITHM_VERSION;
 
-int MinPixels();
+extern uint8_t const MAX_PLANES;
+
+size_t SizeOfHeader();

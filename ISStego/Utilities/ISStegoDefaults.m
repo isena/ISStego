@@ -8,24 +8,18 @@
 
 #import "ISStegoDefaults.h"
 
-int const INITIAL_SHIFT = 7;
-
 int const BYTES_PER_PIXEL = 4;
 int const BITS_PER_COMPONENT = 8;
 
-int const BYTES_OF_LENGTH = 4;
+size_t const SIZE_BYTES_OF_LENGTH = 4;
 
-NSString *const DATA_PREFIX = @"<m>";
-NSString *const DATA_SUFFIX = @"</m>";
+size_t const SIZE_BITS_OF_CHANNELS = 4;
 
-int SizeOfInfoLength() {
-    return BYTES_OF_LENGTH * BITS_PER_COMPONENT;
-}
+Byte const ISSTEGO_ALGORITHM_VERSION = 1;
+size_t const SIZE_ALGORITHM_VERSION = 1;
 
-int MinPixelsToMessage() {
-    return (int)([DATA_PREFIX length] + [DATA_SUFFIX length]) * BITS_PER_COMPONENT;
-}
+uint8_t const MAX_PLANES = 8;
 
-int MinPixels() {
-    return SizeOfInfoLength() + MinPixelsToMessage();
+size_t SizeOfHeader() {
+  return SIZE_ALGORITHM_VERSION + SIZE_BYTES_OF_LENGTH;
 }

@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 
 extern double const TIME_EXPECTATION;
-extern NSString *const ORIGINAL_IMAGE_NAME;
+extern NSString *const IMAGE_NAME;
 extern NSString *const SMALL_IMAGE_NAME;
 extern NSString *const BIG_IMAGE_NAME;
 extern NSString *const STEGO_IMAGE_NAME;
@@ -18,6 +18,7 @@ extern NSString *const TYPE_PNG;
 extern NSString *const TYPE_JPG;
 extern NSString *const TEXT_TO_HIDE;
 extern NSString *const BIG_TEXT_TO_HIDE;
+extern NSString *const PASSWORD;
 
 NSString *type();
 

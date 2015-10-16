@@ -18,26 +18,26 @@
 @implementation ViewController
 
 - (void)viewDidLoad {
-    [super viewDidLoad];
+  [super viewDidLoad];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
-    
-    [self.buttonExtract setEnabled:[self hasStegoObject]];
+  [super viewWillAppear:animated];
+  
+  [self.buttonExtract setEnabled:[self hasStegoObject]];
 }
 
 - (BOOL)hasStegoObject {
-    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    NSString *filePath = [[paths objectAtIndex:0] stringByAppendingPathComponent:STEGO_IMAGE_NAME];
-    
-    UIImage *image = [UIImage imageWithContentsOfFile:filePath];
-    
-    return image ? YES : NO;
+  NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+  NSString *filePath = [[paths objectAtIndex:0] stringByAppendingPathComponent:STEGO_IMAGE_NAME];
+  
+  UIImage *image = [UIImage imageWithContentsOfFile:filePath];
+  
+  return image ? YES : NO;
 }
 
 - (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
+  [super didReceiveMemoryWarning];
 }
 
 @end

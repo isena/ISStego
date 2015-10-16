@@ -11,6 +11,7 @@
 @interface ISStegoDecoder : NSObject
 
 - (NSData *)decodeStegoImage:(id)image
+                    password:(id)password
                        error:(NSError **)error;
 
 @end

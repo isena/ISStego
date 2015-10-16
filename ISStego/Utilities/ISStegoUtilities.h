@@ -9,21 +9,37 @@
 #import <Foundation/Foundation.h>
 #import <CoreGraphics/CoreGraphics.h>
 
-typedef NS_ENUM(NSInteger, ISStegoErrorDomainCode) {
-    ISStegoErrorDomainCodeNotDefined,
-    ISStegoErrorDomainCodeDataTooBig,
-    ISStegoErrorDomainCodeImageTooSmall,
-    ISStegoErrorDomainCodeNoDataInImage
+typedef NS_ENUM(NSInteger, ISStegoChannelCode) {
+  ISStegoChannelCodeRed   = 0x1 << 8 * 0,
+  ISStegoChannelCodeGreen = 0x1 << 8 * 1,
+  ISStegoChannelCodeBlue  = 0x1 << 8 * 2,
+  ISStegoChannelCodeAlpha = 0x1 << 8 * 3
 };
 
-extern NSString *const ISStegoErrorDomain;
+CGContextRef ISCGContextCreate(CGImageRef image, uint32_t *pixels);
 
-NSError *ErrorForDomainCode(ISStegoErrorDomainCode code);
+uint32_t ISChannelsToEncode(BOOL useRed, BOOL useGreen, BOOL useBlue, BOOL useAlpha);
 
-BOOL Contains(NSString *string, NSString *substring);
+NSData *ISDataOfObject(id object, NSError **error);
 
-NSString *Substring(NSString *string, NSString *prefix, NSString *suffix);
+NSDictionary* ISInfoDictionary(uint32_t totalBits, uint32_t totalBitsToHide, uint32_t channelsToEncode, uint8_t bitPlanes);
 
-CGImageRef CGImageCreateWithImage(id image);
+#pragma mark - Array Utilities
 
-id Image(CGImageRef imageRef);
+NSArray *ISShuffledArrayOfBits(uint32_t n, uint32_t channels);
+
+NSArray *ISRemoveNumbersInRangeFromArray(NSArray *array, NSRange range);
+
+#pragma mark - Rand Utilities
+
+void ISSRand(NSData *password);
+
+int	ISRandUniform(uint32_t threshold);
+
+#pragma mark - Image Utilities
+
+CGImageRef ISCGImageCreateWithImage(id image);
+
+id ISImage(CGImageRef imageRef);
+
+NSString *GetBitStringForInt(int value, Byte numberOfBytes);

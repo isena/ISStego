@@ -10,8 +10,8 @@
 
 @interface ISStegoEncoder : NSObject
 
-- (id)stegoImageForImage:(id)image
-                    data:(id)data
-                   error:(NSError **)error;
+@property (readonly, copy) NSDictionary *info;
+
+- (id)hideData:(id)data image:(id)image password:(id)password channels:(NSInteger)channels error:(NSError **)error;
 
 @end

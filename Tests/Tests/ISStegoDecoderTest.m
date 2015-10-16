@@ -17,34 +17,44 @@
 @implementation ISStegoDecoderTest
 
 - (void)testDecodeStegoImage {
-    id image  = [ISTestUtilities imageNamed:STEGO_IMAGE_NAME];
-    
-    XCTAssertNotNil(image, @"image is nil");
-    
-    ISStegoDecoder *decoder = [[ISStegoDecoder alloc] init];
-    
-    NSError *error = nil;
-    
-    NSData *data = [decoder decodeStegoImage:image
-                                       error:&error];
-    
-    NSString *string = [[NSString alloc] initWithData:data
-                                             encoding:NSUTF8StringEncoding];
-    
-    XCTAssertTrue([string isEqual:TEXT_TO_HIDE], @"%@ is not equal to %@", string, TEXT_TO_HIDE);
-    
-    decoder = nil;
+  NSString *imageName = STEGO_IMAGE_NAME;
+  NSString *password = PASSWORD;
+  id initialImage  = [ISTestUtilities imageNamed:imageName];
+  XCTAssertNotNil(initialImage, @"image is nil");
+  
+  ISStegoDecoder *decoder = [[ISStegoDecoder alloc] init];
+  
+  NSError *error = nil;
+  
+  NSData *data = [decoder decodeStegoImage:initialImage
+                                  password:password
+                                     error:&error];
+  
+  NSString *string = [[NSString alloc] initWithData:data
+                                           encoding:NSUTF8StringEncoding];
+  
+  XCTAssertTrue([string isEqual:TEXT_TO_HIDE], @"%@ is not equal to %@", string, TEXT_TO_HIDE);
+  
+  decoder = nil;
 }
 
-#pragma mark - Exception
+#pragma mark - Error
 
 - (void)testNilImage {
-    ISStegoDecoder *decoder = [[ISStegoDecoder alloc] init];
-    
-    NSError *error = nil;
-    
-    XCTAssertThrows([decoder decodeStegoImage:nil
-                                        error:&error]);
+  NSString *password = PASSWORD;
+  id initialImage = nil;
+  
+  ISStegoDecoder *decoder = [[ISStegoDecoder alloc] init];
+  
+  NSError *error = nil;
+  
+  NSData *data = [decoder decodeStegoImage:initialImage
+                                  password:password
+                                     error:&error];
+  
+  XCTAssertNil(data, @"data is not nil");
+  
+  XCTAssertNotNil(error);
 }
 
 @end
